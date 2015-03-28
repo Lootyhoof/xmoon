@@ -1,0 +1,4 @@
+skin browser      xmoon chrome/browser/
+skin communicator xmoon chrome/communicator/
+skin mozapps      xmoon chrome/mozapps/
+skin global       xmoon chrome/global/

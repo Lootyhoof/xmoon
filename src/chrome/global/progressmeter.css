@@ -1,0 +1,54 @@
+/* ===== progressmeter.css ==============================================
+  == Styles used by the XUL progressmeter element.
+  ======================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: progressmeter ::::: */
+
+progressmeter {
+  margin: 2px 4px;
+  min-width: 128px;
+  border-top: 0px solid transparent !important;
+  border-bottom: 0px solid transparent !important;
+  border-right: 0px solid #dcdcdc !important;
+  border-left: 0px solid #dcdcdc !important;
+  background: url("chrome://global/skin/progressmeter/progressbar.png") !important;
+}
+
+progressmeter[mode="undetermined"] {
+  background: url("chrome://global/skin/progressmeter/chunks.png") repeat-y top left;
+  height: 13px;
+}
+
+.progress-bar {
+  -moz-appearance: none;
+  height: 13px;
+  background: url("chrome://global/skin/progressmeter/chunks.png") repeat;
+}
+
+
+/* ::::: statusbar progressmeter ::::: */
+
+#urlbar .progressmeter-statusbar {
+  border: transparent !important;
+  margin: 3px 6px 3px 0px !important;
+  height: 13px !important;
+  min-width: 128px;
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+#urlbar .progress-bar {
+  padding: 0px;
+  background: url("chrome://global/skin/progressmeter/progress.png") repeat-x;
+}
+
+/* :::::: download progress meter :::::::: */
+
+#progress, #progress0 {
+  vertical-align: baseline !important;
+  -moz-appearance: progressbar;
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+}

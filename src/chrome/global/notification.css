@@ -1,0 +1,217 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+notification {
+  padding: 3px 3px 4px;
+  text-shadow: none;
+}
+
+notification[type="info"] {
+  color: rgba(255,255,255,0.95);
+  background: url("chrome://global/skin/notification/info-bar-background.png") #404040 repeat-x top left;
+  border-top: 1px solid #707070;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+notification[type="warning"] {
+  color: rgba(0,0,0,0.95);
+  background: url("chrome://global/skin/notification/warning-bar-background.png") #ffc703 repeat-x top left;
+  border-top: 1px solid #ffe970;
+  border-bottom: 1px solid #bf8a01;
+}
+
+notification[type="critical"] {
+  color: rgba(255,255,255,0.95);
+  background: url("chrome://global/skin/notification/critical-bar-background.png") #980000 repeat-x top left;
+  border-top: 1px solid #e35959;
+  border-bottom: 1px solid #5d0000;
+}
+
+.messageImage {
+  width: 16px;
+  height: 16px;
+  margin: 0 4px;
+}
+
+/* Default icons for notifications */
+
+notification[type="info"] .messageImage {
+  list-style-image: url("chrome://global/skin/notification/info-icon.png");
+}
+
+notification[type="warning"] .messageImage {
+  list-style-image: url("chrome://global/skin/notification/warning-icon.png");
+}
+
+notification[type="critical"] .messageImage {
+  list-style-image: url("chrome://global/skin/notification/error-icon.png");
+}
+
+.notification-inner {
+  border: 0 !important;
+}
+
+.messageText {
+  margin: 0 3px !important;
+  padding: 0;
+  font-weight: bold;
+}
+
+.messageCloseButton {
+  -moz-appearance: none;
+  padding: 0;
+  margin: 0 2px;
+  list-style-image: url("chrome://global/skin/icons/close.png");
+  -moz-image-region: rect(0, 16px, 16px, 0);
+  border: none;
+}
+
+.messageCloseButton > .toolbarbutton-text {
+  display: none;
+}
+
+.messageCloseButton:hover {
+  -moz-image-region: rect(0, 32px, 16px, 16px);
+}
+
+.messageCloseButton:hover:active {
+  -moz-image-region: rect(0, 48px, 16px, 32px);
+}
+
+.messageCloseButton:focus > .toolbarbutton-icon {
+  box-shadow: none;
+}
+
+/* Popup notification */
+
+.popup-notification-description {
+  max-width: 248px;
+}
+
+.popup-notification-menubutton {
+  -moz-appearance: none;
+  margin-top: 17px;
+  padding-left: 0px;
+}
+
+.popup-notification-menubutton ,
+.popup-notification-menubutton:hover,
+.popup-notification-menubutton:focus,
+.popup-notification-menubutton:active {
+  border: none;
+  background: none;
+  padding-top: 0;
+  padding-right: 0;
+}
+
+.button-menubutton-button > .button-box {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.popup-notification-menubutton:not([type="menu-button"]),
+.popup-notification-menubutton > .button-menubutton-button,
+.popup-notification-menubutton > .button-menubutton-dropmarker {
+  color: #434343;
+  border-radius: 13px;
+  border: 1px solid #b5b5b5;
+  background: linear-gradient(#fff, #f2f2f2);
+  box-shadow: inset 0 1px rgba(255,255,255,.8),
+              inset 0 0 1px rgba(255,255,255,.25),
+              0 1px rgba(255,255,255,.3);
+  background-clip: padding-box;
+  background-origin: padding-box;
+  height: 24px;
+}
+
+.popup-notification-menubutton:not([type="menu-button"]) {
+  padding: 2px 9px;
+}
+
+.popup-notification-menubutton > .button-menubutton-button {
+  -moz-appearance: none;
+  margin: 0;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  -moz-padding-start: 8px;
+  -moz-padding-end: 5px;
+  -moz-border-end: 1px solid rgba(0,0,0,.65);
+}
+
+.popup-notification-menubutton > .button-menubutton-dropmarker {
+  width: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  -moz-padding-start: 5px;
+  -moz-padding-end: 8px;
+  -moz-margin-start: -1px;
+  list-style-image: url("chrome://global/skin/icons/panel-dropmarker.png");
+}
+
+.popup-notification-menubutton > .button-menubutton-button:-moz-locale-dir(ltr),
+.popup-notification-menubutton > .button-menubutton-dropmarker:-moz-locale-dir(rtl) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.popup-notification-menubutton > .button-menubutton-button:-moz-locale-dir(rtl),
+.popup-notification-menubutton > .button-menubutton-dropmarker:-moz-locale-dir(ltr) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.popup-notification-menubutton:not([type="menu-button"]):hover:active,
+.popup-notification-menubutton > .button-menubutton-button:hover:active,
+.popup-notification-menubutton[open="true"] > .button-menubutton-dropmarker {
+  box-shadow: inset 0 1px 4px -3px #000, 0 1px rgba(255, 255, 255, 0.3);
+}
+
+.popup-notification-closeitem {
+  list-style-image: url("chrome://global/skin/icons/close.png");
+  -moz-image-region: rect(0, 16px, 16px, 0);
+}
+
+popupnotification .button-menubutton-dropmarker[open="true"] {
+  margin: 1px 1px 0 -1px;
+}
+
+#click-to-play-plugins-notification button {
+  margin: 5px 20px;
+}
+
+/*
+popupnotification button,
+popupnotification button:hover,
+popupnotification button:focus,
+popupnotification button:active,
+popupnotification button > .button-box,
+popupnotification button:hover > .button-box,
+popupnotification button:focus > .button-box,
+popupnotification button:active > .button-box {
+  border: none;
+  background: none;
+  padding-top: 0;
+  padding-right: 0;
+}
+
+#click-to-play-plugins-notification button {
+  -moz-appearance: none;
+  color: #434343;
+  border-radius: 4px;
+  border: 1px solid #b5b5b5;
+  background: linear-gradient(#fff, #f2f2f2);
+  box-shadow: inset 0 1px rgba(255,255,255,.8), inset 0 0 1px rgba(255,255, 255,.25), 0 1px rgba(255,255,255,.3);
+  background-clip: padding-box;
+  background-origin: padding-box;
+  padding: 2px 6px;
+  margin: 5px 20px;
+  min-height: 0px;
+}
+
+#click-to-play-plugins-notification button:focus {
+  box-shadow: 0 0 1px #6483f8 inset, 0 0 4px 1px #6483f8, 0 0 2px 1px #6483f8;
+}
+
+#click-to-play-plugins-notification button:hover:active {
+  box-shadow: inset 0 1px 4px -3px #000, 0 1px rgba(255,255,255,.3);
+}
+*/

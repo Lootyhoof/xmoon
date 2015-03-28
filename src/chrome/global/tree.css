@@ -1,0 +1,373 @@
+/* ===== tree.css ===================================================
+  == Styles used by the XUL outline element.
+  ======================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: tree ::::: */
+
+tree {
+  margin: 0px 4px;
+  border-top: 1px solid;
+  border-right: 1px solid ;
+  border-bottom: 1px solid ;
+  border-left: 1px solid ;
+  color: #383838;
+  font-weight: normal;
+  background-color: #FFFFFF;
+}
+
+/* ::::: tree focusring ::::: */
+
+.focusring > .tree-stack > .tree-rows > .tree-bodybox {
+  border: 1px solid transparent;  
+}
+
+.focusring:focus > .tree-stack > .tree-rows > .tree-bodybox {
+  border: 1px solid #6483f8;
+}
+
+/* ::::: tree rows ::::: */
+
+treechildren::-moz-tree-row {
+  border-top: 1px solid transparent;
+  height: 18px !important;
+  background-color: -moz-field;
+}
+
+/*treechildren::-moz-tree-row(even) {
+  background-color: white;
+}*/
+ 
+treechildren::-moz-tree-row(selected) {
+  background-image: -moz-linear-gradient(#D4D4D4, #D4D4D4);
+}
+ 
+treechildren::-moz-tree-row(selected, focus) {
+  background-image: -moz-linear-gradient(#6483f8, #2255f5);
+}
+
+tree[selstyle="primary"] > treechildren::-moz-tree-row {
+  border: none;
+  background-color: transparent;
+}
+
+/* ::::: tree cells ::::: */
+
+treechildren::-moz-tree-cell {
+  padding: 0px 2px 0px 2px;
+}
+
+tree[seltype="cell"] > treechildren::-moz-tree-cell-text,
+tree[seltype="text"] > treechildren::-moz-tree-cell-text,
+treechildren::-moz-tree-cell-text {
+  color: inherit;
+}
+
+tree[seltype="cell"] > treechildren::-moz-tree-cell {
+  padding: 0px 1px 0px 1px;
+}
+
+tree[seltype="text"] > treechildren::-moz-tree-cell-text {
+  padding: 0px 1px 1px 1px;
+}
+
+treechildren::-moz-tree-cell-text(selected) {
+  font-weight:bold;
+  color: -moz-DialogText;
+}
+
+tree[seltype="text"] > treechildren::-moz-tree-cell-text(active, selected) {
+  background-color: #D4D4D4;
+  color: -moz-DialogText;
+}
+
+treechildren::-moz-tree-cell-text(selected, focus) {
+  color: HighlightText;
+}
+
+tree[seltype="cell"] > treechildren::-moz-tree-cell(active, selected, focus) {
+  background-color: Highlight;
+}
+tree[seltype="cell"] > treechildren::-moz-tree-cell-text(active, selected, focus) {
+  color: HighlightText;
+}
+
+tree[seltype="text"] > treechildren::-moz-tree-cell-text(active, selected, focus) {
+  background-color: Highlight;
+  color: HighlightText;
+}
+
+/* ::::: lines connecting cells ::::: */
+
+treechildren::-moz-tree-line {
+  /* XXX there should be no border on Mac, but trees currently
+         paint the line black by default, so I'll just leave this
+         for now. */
+  visibility: hidden;
+  border: 1px dotted grey;
+}
+
+
+/* ::::: tree separator ::::: */
+
+treechildren::-moz-tree-separator {
+  border-top: 1px dashed #C7C7C7;
+  margin: 0 2px;
+}
+
+/* ::::: drop feedback ::::: */
+
+tree[seltype="cell"] > treechildren::-moz-tree-cell(primary, dropOn),
+tree[seltype="text"] > treechildren::-moz-tree-cell(primary, dropOn),
+treechildren::-moz-tree-cell(primary, dropOn) {
+  background-color: #A1A1A1 !important;
+  color: #FFF !important;
+  background-image: none;
+}
+tree[seltype="cell"] > treechildren::-moz-tree-cell-text(primary, dropOn),
+tree[seltype="text"] > treechildren::-moz-tree-cell-text(primary, dropOn),
+treechildren::-moz-tree-cell-text(primary, dropOn) {
+  background-color: #4B80D5;
+  color: #fff;
+}
+
+treechildren::-moz-tree-drop-feedback {
+  background-color: #3D80DF;
+  width: 50px;
+  height: 2px;
+  margin-left: 5px;
+}
+
+/* ::::: tree progress meter ::::: */
+
+treechildren::-moz-tree-progressmeter {
+  min-width: 128px;
+  height: 12px !important;
+  margin:  2px 4px 2px 4px !important;
+  padding: 0px !important;
+  border-top: 0px solid transparent !important;
+  border-bottom: 0px solid transparent !important;
+  border-right: 1px solid #dcdcdc !important;
+  border-left: 1px solid #dcdcdc !important;
+  background: url("chrome://global/skin/progressmeter/progressbar.png") repeat-x top left !important;
+}
+
+treechildren::-moz-tree-progressmeter(progressUndetermined) {
+  list-style-image: url("chrome://global/skin/progressmeter/progress.png");
+}
+
+treechildren::-moz-tree-cell-text(progressmeter) {
+  margin: 2px 4px;
+}
+
+/* ::::: tree columns ::::: */
+treecolpicker,
+treecol:not([hideheader="true"]) {
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  border-top: 1px solid #404040;
+  border-right:1px solid #BEBEBE;
+  border-bottom:1px solid #666666;
+  margin-top: -1px;
+  color: -moz-DialogText;
+  padding: 0px 4px;
+  background: -moz-linear-gradient(top, #FFFFFF, #F4F4F4 45%, #ECECEC, #F4F4F4);
+}
+
+listheader > treecol {
+  min-height: 18px;
+}
+
+treecolpicker {
+  margin-right: -1px;
+}
+
+.treecol-image {
+  padding: 0px 1px;
+}
+
+.treecol-text {
+  margin: 0px !important;
+}
+
+treecol[hideheader="true"] {
+  -moz-appearance: none;
+  border: none;
+  padding: 0;
+  max-height: 0px;
+}
+
+treecol[sortable="true"]:hover,
+treecol:hover:active, 
+treecolpicker:hover:active {
+  background: -moz-linear-gradient(top, #E0E0E0, #D6D6D6 45%, #CFCFCF, #D6D6D6);
+}
+
+treecol[sortDirection="ascending"],
+treecolpicker[sortDirection="ascending"],
+treecol[sortDirection="descending"],
+treecolpicker[sortDirection="descending"] {
+  background: -moz-linear-gradient(top, #C7E2F8, #86C0F3, #BCE6F7);
+}
+
+treecol[sortDirection="ascending"]:hover:active, 
+treecolpicker[sortDirection="ascending"]:hover:active,
+treecol[sortDirection="descending"]:hover:active, 
+treecolpicker[sortDirection="descending"]:hover:active {
+  background: -moz-linear-gradient(top, #91B3E8, #438CE2, #83B9E7);
+}
+
+/* ::::: column drag and drop styles ::::: */
+
+treecol[dragging="true"] {
+  -moz-border-top-colors: ThreeDDarkShadow transparent !important;
+  -moz-border-right-colors: ThreeDDarkShadow transparent!important;
+  -moz-border-bottom-colors: ThreeDDarkShadow transparent !important;
+  -moz-border-left-colors: ThreeDDarkShadow transparent !important;
+  background-color: ThreeDShadow !important;
+  color: ThreeDHighlight !important;
+}
+
+treecol[insertafter="true"] {
+  -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
+}
+
+treecol[insertbefore="true"] {
+  -moz-border-left-colors: ThreeDDarkShadow ThreeDShadow;
+}
+
+treechildren::-moz-tree-column(insertbefore) {
+  border-left: 1px solid ThreeDShadow;
+}
+
+treechildren::-moz-tree-column(insertafter) {
+  border-right: 1px solid ThreeDShadow;
+}
+
+/* ::::: sort direction indicator :::::  */
+
+.treecol-sortdirection {
+  list-style-image: none;
+}
+
+treecol:not([hideheader="true"]) > .treecol-sortdirection[sortDirection="ascending"] {
+  list-style-image: url("chrome://global/skin/tree/sort-asc.gif");
+}
+
+treecol:not([hideheader="true"]) > .treecol-sortdirection[sortDirection="descending"] {
+  list-style-image: url("chrome://global/skin/tree/sort-dsc.gif");
+}
+
+/* ::::: column picker :::::  */
+
+.tree-columnpicker-icon {
+  list-style-image: url("chrome://global/skin/tree/columnpicker.gif");
+}
+
+/* ::::: twisty :::::  */
+
+treechildren::-moz-tree-twisty {
+  padding-right: 4px;
+  padding-top: 1px;
+  width: 11px; /* The image's width is 9 pixels */
+  list-style-image: url("chrome://global/skin/tree/twisty-clsd.png");
+}
+
+treechildren::-moz-tree-twisty(open) {
+  width: 11px; /* The image's width is 9 pixels */
+  list-style-image: url("chrome://global/skin/tree/twisty-open.png");
+}
+
+treechildren::-moz-tree-indentation {
+  width: 18px;
+}
+
+/* ::::: gridline style ::::: */
+
+treechildren.gridlines::-moz-tree-cell {
+  border-right: 1px solid transparent !important;
+  border-bottom: 1px solid transparent !important;
+}
+
+treechildren.gridlines::-moz-tree-row {
+  border: none;
+}
+
+treechildren::-moz-tree-image(Name) {
+  padding-right: 2px;
+}
+
+treechildren::-moz-tree-image(Name) {
+  margin: 0px 2px;
+  list-style-image: url("chrome://global/skin/icons/folder-item.png") !important;
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+
+treechildren::-moz-tree-image(Name, container) {
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+
+treechildren::-moz-tree-image(Name, open) {
+  -moz-image-region: rect(16px, 32px, 32px, 16px);
+}
+
+treechildren::-moz-tree-image(Name, separator) {
+  list-style-image: none;
+  width: 0px !important;
+  height: 0px !important;
+  margin: 0px 0px;
+}
+
+treechildren::-moz-tree-cell-text(Name, separator) {
+  color: #a3a3a3;
+  margin: 0px 5px 0px 5px;
+}
+
+treechildren::-moz-tree-cell-text(Name, separator, selected, focus) {
+  color: #fff;
+}
+
+/* ::::: alternating background ::::: */
+
+treechildren[alternatingbackground="true"]::-moz-tree-row(odd) {
+  background-color: -moz-oddtreerow;
+}
+
+treechildren[alternatingbackground="true"]::-moz-tree-row(odd, selected) {
+  background-color: #D4D4D4;
+}
+
+treechildren[alternatingbackground="true"]::-moz-tree-cell-text(odd, selected) {
+  color: -moz-DialogText;
+}
+
+treechildren[alternatingbackground="true"]::-moz-tree-row(odd, selected, focus) {
+  background-color: Highlight;
+}
+
+treechildren[alternatingbackground="true"]::-moz-tree-cell-text(odd, selected, focus) {
+  color: HighlightText;
+}
+
+/* ::::: editable tree ::::: */
+
+treechildren::-moz-tree-row(selected, editing) {
+  background-color: transparent;
+}
+
+treechildren::-moz-tree-cell-text(selected, editing) {
+  color: inherit;
+}
+
+.tree-input {
+  -moz-appearance: none;
+   border: 1px solid Highlight;
+  -moz-border-top-colors: Highlight;
+  -moz-border-bottom-colors: Highlight;
+  -moz-border-left-colors: Highlight;
+  -moz-border-right-colors: Highlight;
+  margin: 0;
+  -moz-margin-start: -3px;
+  padding: 1px;
+}

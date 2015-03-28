@@ -1,0 +1,169 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+button, .dialog-button {
+  -moz-appearance: none;
+  /* The horizontal margin used here come from the Aqua Human Interface
+     Guidelines, there should be 12 pixels between two buttons. */
+  margin: 5px 6px 3px;
+  min-width: 79px;
+  min-height: 18px;
+  color: ButtonText;
+  text-shadow: none;
+  border: 1px solid #8c8c8c;
+  border-radius: 4px;
+  background: -moz-linear-gradient(top,#ffffff,#f5f5f5 45%,#ececec 1px,#f2f2f2);
+}
+
+button > .button-box,
+.dialog-button > .button-box {
+  padding: 1px 3px;
+  margin: 2px 2px;
+}
+
+button:focus, .dialog-button:focus {
+  background: -moz-linear-gradient(top,#C1DDF5,#86C0F2 50%,#B0DBF0);
+}
+
+button:hover:active, .dialog-button:hover:active {
+  border: 1px solid #4d54ab;
+  background: -moz-linear-gradient(top,#BAD6EF,#6BA3E9 45%,#4492E9 1px,#A8D3EF);
+}
+
+.button-text {
+  margin: 1px 0 !important;
+  -moz-margin-start: 3px !important;
+  -moz-margin-end: 2px !important;
+  text-align: center;
+}
+
+.button-icon {
+  -moz-margin-start: 1px;
+}
+
+button[type="default"],
+.dialog-button[type="default"] {
+  font-weight:bold;
+}
+
+/* .......... disabled state .......... */
+
+button[disabled="true"], .dialog-button[disabled="true"] {
+  color: GrayText;
+}
+
+/* ::::: menu/menu-button buttons ::::: */
+
+button[type="menu-button"]  {
+  -moz-appearance: none !important;
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  margin: 0;
+  border: none;
+}
+
+.button-menu-dropmarker,
+.button-menubutton-dropmarker {
+  margin: 1px;
+  min-width:11px;
+  min-height:11px;
+  background: none;
+}
+  
+.button-menu-dropmarker[disabled="true"],
+.button-menubutton-dropmarker[disabled="true"] {
+  background-image: url("chrome://global/skin/arrow/arrow-dn-dis.gif");
+}
+
+.button-menubutton-dropmarker[open="true"] {
+  margin: 2px 0px 0px 2px;
+}
+
+/* ::::: plain buttons ::::: */
+
+button.plain {
+  border: 0px !important;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+button[type="disclosure"] {
+  border: 0px !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  -moz-appearance: none;
+  list-style-image: url("chrome://global/skin/tree/twisty-clsd.png");
+  min-width: 0px !important;
+  background-color: transparent;
+}
+
+button[type="disclosure"][open="true"] {
+  list-style-image: url("chrome://global/skin/tree/twisty-open.png"); 
+}
+
+/* ::::: help button ::::: */
+
+button[dlgtype="help"] {
+  padding: 0;
+  border: none;
+  margin: 5px 6px;
+  -moz-appearance: none;
+  -moz-box-align: center;
+  min-width: 1px;
+}
+
+button[dlgtype="help"] > .button-box {
+  padding: 0;
+}
+
+button[dlgtype="help"],
+button[dlgtype="help"]:focus,
+button[dlgtype="help"]:hover:active {
+  border: none;
+  background: transparent;
+}
+
+button[dlgtype="help"][disabled] {
+  opacity: 0.5;
+}
+
+button[dlgtype="help"]:focus {
+  outline: 2px solid #6483f8;
+  outline-offset: -2px;
+  -moz-outline-radius: 10000px;
+}
+
+button[dlgtype="help"] > .button-box {
+  margin: 0;
+}
+
+button[dlgtype="help"] > .button-box > .button-icon {
+  list-style-image: url("chrome://global/skin/icons/question-mark.png");
+  -moz-image-region: rect(0 24px 24px 0);
+  padding: 0;
+  margin: 0;
+}
+
+button[dlgtype="help"]:active > .button-box > .button-icon {
+  -moz-image-region: rect(0 48px 24px 24px);
+}
+
+button[dlgtype="help"] > .button-box > .button-text {
+  display: none;
+}
+
+.expander-up, .expander-down,
+.expander-up:focus, .expander-down:focus,
+.expander-up:hover:active, .expander-down:hover:active {
+  border: none;
+  background: transparent;
+}
+
+/* Saved Password Editor */
+#speMenuBtn, #speMenuBtn:focus,#speMenuBtn:hover:active {
+  border: none;
+  background: transparent;
+}

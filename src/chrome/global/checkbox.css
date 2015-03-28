@@ -1,0 +1,79 @@
+/* ===== checkbox.css ===================================================
+  == Styles used by the XUL checkbox element.
+  ======================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: checkbox ::::: */
+
+checkbox {
+	-moz-appearance: none;
+	-moz-box-align: center;
+	margin: 2px 4px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	-moz-padding-start: 4px;
+	-moz-padding-end: 2px;
+}
+
+.checkbox-label-box {
+	-moz-margin-start: 2px;
+	border: 1px solid transparent;
+	padding: 0px 1px;
+}
+
+.checkbox-icon {
+	-moz-margin-end: 2px;
+}
+
+.checkbox-label {
+	margin: 0 !important;
+	line-height: 16px;
+}
+
+/* ..... focused state ..... */
+
+checkbox:focus > .checkbox-label-box {
+	border: 1px dotted ThreeDDarkShadow;
+}
+
+/* ..... disabled state ..... */
+
+checkbox[disabled="true"] > .checkbox-check {
+	background-color: transparent;
+}
+
+checkbox[disabled="true"] {
+	opacity: .5 !important;
+	color: GrayText !important;
+}
+
+/* ::::: checkmark image ::::: */
+
+.checkbox-check {
+	-moz-appearance: none;
+	-moz-box-align: center;
+	border: 0px solid;
+	min-width: 18px;
+	min-height: 18px;
+	list-style-image: none;
+}
+  
+checkbox:hover:active > .checkbox-check {
+	background-color: transparent;
+}
+
+/* ..... checked state ..... */
+
+checkbox[checked="true"] > .checkbox-check {
+	list-style-image: url("chrome://global/skin/checkbox/checkbox-check.png");
+	background: url("chrome://global/skin/checkbox/checkbox-chkd.png") no-repeat;
+}
+
+checkbox:not([checked="true"]) > .checkbox-check,
+checkbox[checked="true"][disabled="true"] > .checkbox-check,
+checkbox[checked="true"] > .checkbox-check:-moz-window-inactive {
+	background: url("chrome://global/skin/checkbox/checkbox.png") no-repeat;
+}
+
+

@@ -1,0 +1,52 @@
+.searchbar-textbox {
+  border-radius: 10000px;
+}
+
+.searchbar-engine-button {
+  -moz-padding-start: 5px;
+  -moz-padding-end: 0px;
+  margin: 1px 0 0 0;
+  -moz-appearance: none;
+  min-width: 0;
+}
+
+.searchbar-engine-button,
+.searchbar-engine-button:focus,
+.searchbar-engine-button:hover:active {
+  border: none;
+  background: transparent;
+}
+
+.searchbar-engine-button > .button-box {
+  padding: 1px 0px;
+}
+
+.searchbar-popup {
+  margin-top: 4px;
+  -moz-margin-start: 3px;
+}
+
+.searchbar-textbox > .autocomplete-textbox-container > .textbox-input-box {
+  margin: 0;
+  padding: 3px 2px 2px 1px;
+}
+
+.searchbar-engine-image {
+  width: 16px;
+  height: 16px;
+  list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
+}
+
+.searchbar-dropmarker-image {
+  list-style-image: url("chrome://browser/skin/searchbar-dropmarker.png");
+  -moz-margin-start: 2px;
+}
+
+.search-go-container {
+  -moz-box-align: center;
+  -moz-padding-end: 6px;
+}
+
+.search-go-button {
+  list-style-image: url("chrome://browser/skin/Search.png");
+}

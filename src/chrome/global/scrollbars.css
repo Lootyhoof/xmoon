@@ -1,0 +1,143 @@
+/* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1/GPL 2.0/LGPL 2.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * The Original Code is Mozilla Communicator client code, released
+ * March 31, 1998.
+ *
+ * The Initial Developer of the Original Code is
+ * Netscape Communications Corporation.
+ * Portions created by the Initial Developer are Copyright (C) 2002
+ * the Initial Developer. All Rights Reserved.
+ *
+ * Contributor(s):
+ *   Joe Hewitt (hewitt@netscape.com)
+ *
+ * Alternatively, the contents of this file may be used under the terms of
+ * either the GNU General Public License Version 2 or later (the "GPL"), or
+ * the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+ * in which case the provisions of the GPL or the LGPL are applicable instead
+ * of those above. If you wish to allow use of your version of this file only
+ * under the terms of either the GPL or the LGPL, and not to allow others to
+ * use your version of this file under the terms of the MPL, indicate your
+ * decision by deleting the provisions above and replace them with the notice
+ * and other provisions required by the GPL or the LGPL. If you do not delete
+ * the provisions above, a recipient may use your version of this file under
+ * the terms of any one of the MPL, the GPL or the LGPL.
+ *
+ * ***** END LICENSE BLOCK ***** */
+
+/* ===== nativescrollbars.css ===========================================
+  == Styles used by native scrollbar-related elements.
+  ======================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml"); 
+
+scrollbar {
+  -moz-binding: url("chrome://global/content/bindings/scrollbar.xml#scrollbar");
+  margin: 0px;
+  cursor: default;
+}
+
+scrollbar[orient="vertical"] {
+  width:15px;
+  padding: 0px 2px 0px 3px;
+  background: url("chrome://global/skin/scrollbar/vertical-background.png") no-repeat scrollbar;
+}
+
+scrollbar[orient="horizontal"] {
+  height:15px;
+  padding:3px 0px 2px 0px;
+  background: url("chrome://global/skin/scrollbar/horizontal-background.png") no-repeat scrollbar;
+}
+
+thumb {
+  -moz-binding: url("chrome://global/skin/scrollbar.xml#thumb");
+}
+
+thumb, thumb[height]:not([width]) {
+  width:10px;
+  min-height:24px;
+  background:url("chrome://global/skin/scrollbar/thumb-topcap.png") no-repeat top left;
+}
+
+thumb:hover, thumb[height]:not([width]):hover,
+thumb:active, thumb[height]:not([width]):active {
+  background:url("chrome://global/skin/scrollbar/thumb-topcap-hover.png") no-repeat top left;
+}
+
+gripper{
+  -moz-box-flex: 1;  
+}
+
+thumb > gripper, thumb[height]:not([width]) > gripper {
+  width:10px;
+  background:url("chrome://global/skin/scrollbar/vertical-thumb-end.png") no-repeat bottom left;
+}
+
+thumb:hover > gripper, thumb[height]:not([width]):hover > gripper,
+thumb:active > gripper, thumb[height]:not([width]):active > gripper {
+  background:url("chrome://global/skin/scrollbar/vertical-thumb-end-hover.png") no-repeat bottom left;
+}
+
+/*startcap*/
+thumb[orient="horizontal"], thumb[width]:not([height]) {
+  height:10px;
+  min-width:24px;
+  background:url("chrome://global/skin/scrollbar/thumb-startcap.png") no-repeat top left;
+}
+
+thumb[orient="horizontal"]:hover, thumb[width]:not([height]):hover,
+thumb[orient="horizontal"]:active, thumb[width]:not([height]):active {
+  background:url("chrome://global/skin/scrollbar/thumb-startcap-hover.png") no-repeat top left;
+}
+
+/*endcap*/
+thumb[orient="horizontal"] > gripper, thumb[width]:not([height]) > gripper {
+  height:10px;
+  background:url("chrome://global/skin/scrollbar/horizontal-thumb-end.png") no-repeat top right;
+}
+
+thumb[orient="horizontal"]:hover > gripper, thumb[width]:not([height]):hover > gripper,
+thumb[orient="horizontal"]:active > gripper, thumb[width]:not([height]):active > gripper {
+  background:url("chrome://global/skin/scrollbar/horizontal-thumb-end-hover.png") no-repeat top right;
+}
+
+/* :: scrollbar button :: */
+
+scrollbarbutton {
+  background-repeat: no-repeat;
+}
+
+/* .. increment . */
+
+scrollbarbutton[type="increment"],
+scrollbar[orient="vertical"] > scrollbarbutton[type="increment"] {
+  margin: 0px 0px 0px 0px;
+  width: 0px;
+  height: 0px;
+}
+
+/* .. decrement . */
+
+scrollbarbutton[type="decrement"],
+scrollbar[orient="vertical"] > scrollbarbutton[type="decrement"] {
+  margin: 0px 0px 0px 0px;
+  width: 0px;
+  height: 0px;
+}
+
+
+scrollcorner {
+  background:url("chrome://global/skin/scrollbar/scrollcorner.png") no-repeat;
+}

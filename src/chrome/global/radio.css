@@ -1,0 +1,93 @@
+/* ===== radio.css ===================================================
+  == Styles used by the XUL radio element.
+  ======================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: radio ::::: */
+
+radio {
+	/*-moz-appearance: none !important;
+	-moz-appearance: radio-container;*/
+	list-style-position: inside;
+	-moz-box-align: center;
+	margin: 2px 4px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	-moz-padding-start: 4px;
+	-moz-padding-end: 2px;
+	background: none;
+}
+
+.radio-label-box {
+	/*-moz-appearance: none !important;*/
+	list-style-image: none;
+	-moz-margin-start: 2px;
+	border: 1px solid transparent;
+	padding-top: 0px;
+	padding-bottom: 1px;
+	-moz-padding-start: 1px;
+	-moz-padding-end: 0px;
+}
+
+.radio-icon {
+	-moz-margin-end: 2px;
+}
+
+.radio-label {
+	margin: 0 !important;
+	line-height: 16px;
+}
+
+/* ..... focused state ..... */
+
+radio[focused="true"] > .radio-label-box {
+	border: 1px dotted ThreeDDarkShadow;
+}
+
+/* ..... disabled state ..... */
+
+radio[disabled="true"] > .radio-check-box1 {
+	background-color: transparent;
+}
+
+radio[disabled="true"] {
+	opacity: .5;
+	color: GrayText !important;
+}
+
+/* ::::: checkmark image ::::: */
+
+.radio-check {
+	margin: 1px 0px;
+	/*-moz-appearance: none !important;*/
+	width: 18px;
+	height: 18px;
+	list-style-image: none;
+}
+
+.radio-check-box1 {
+	-moz-appearance: none !important;
+	padding: 0px;
+	width: 18px;
+	height: 18px;
+	list-style-image: none;
+	background: none;
+}
+
+radio:hover:active > .radio-check-box1 {
+	background-color: transparent;
+}
+
+/* ..... checked state ..... */
+
+radio[selected="true"] > .radio-check {
+	list-style-image: url("chrome://global/skin/radio/radio-check.png");
+	background: url('chrome://global/skin/radio/radio-chkd.png') no-repeat;
+}
+
+radio:not([selected="true"]) > .radio-check,
+radio[selected="true"][disabled="true"] > .radio-check,
+radio[selected="true"] > .radio-check:-moz-window-inactive {
+	background: url('chrome://global/skin/radio/radio.png');
+}
