@@ -51,6 +51,7 @@
 #main-window:after{
   font: message-box !important;
   font-weight: bold !important;
+  color: black !important;
   text-shadow: 0 1px rgba(255, 255, 255, .4) !important;
   top: 3px !important;
   text-align: center !important;
@@ -58,6 +59,34 @@
 
 #main-window[sizemode="maximized"]:after{
   top: 9px !important;
+}
+
+#main-window:-moz-lwtheme-brighttext:after {
+  color: inherit !important;
+  text-shadow: inherit !important;
+}
+
+#urlbar:-moz-lwtheme:not([focused="true"]),
+.searchbar-textbox:-moz-lwtheme:not([focused="true"]) {
+  opacity: .9;
+}
+
+#navigator-toolbox toolbarbutton:-moz-lwtheme {
+  color: inherit;
+  text-shadow: inherit;
+}
+
+#PersonalToolbar:-moz-lwtheme,
+#toolbar-menubar:-moz-lwtheme,
+#addon-bar:-moz-lwtheme,
+#nav-bar:-moz-lwtheme,
+#titlebar:-moz-lwtheme,
+#main-window[privatebrowsingmode=temporary] #nav-bar[tabsontop=false] {
+  -moz-appearance: none !important;
+  background: none !important;
+  /* Switching to a lightweight theme shouldn't move the content area,
+     so avoid changing border widths here. */
+  border-color: transparent !important;
 }
 
 #main-window {
@@ -136,6 +165,12 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.57);
 }
 
+#addon-bar:-moz-window-inactive {
+  background: #D8D8D8;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}  
+
 #navigator-toolbox[tabsontop="true"] > #nav-bar,
 #navigator-toolbox[tabsontop="true"]:not([customizing]) > #nav-bar[collapsed="true"] + toolbar,
 #navigator-toolbox[tabsontop="true"]:not([customizing]) > #nav-bar[collapsed="true"] + #customToolbars + #PersonalToolbar {
@@ -154,6 +189,8 @@
   background-color: #D8D8D8;
   border-bottom-color: rgba(0, 0, 0, 0.32);
 }
+
+
 
 /* ::::: app menu button ::::: */
 #appmenu-toolbar-button {
@@ -175,6 +212,10 @@
   margin: 0 0 0px 3px;
   height: 21px;
   font-weight: bold;
+}
+
+#appmenu-button menupopup {
+  font-weight: normal !important;
 }
 
 #main-window[privatebrowsingmode=temporary] #appmenu-button,
@@ -1888,13 +1929,13 @@ toolbarbutton.chevron > .toolbarbutton-menu-dropmarker {
 .tabbrowser-tab > .tab-stack > .tab-background > .tab-background-start:-moz-lwtheme-brighttext:not([selected="true"]),
 .tabbrowser-tab > .tab-stack > .tab-background > .tab-background-middle:-moz-lwtheme-brighttext:not([selected="true"]),
 .tabbrowser-tab > .tab-stack > .tab-background > .tab-background-end:-moz-lwtheme-brighttext:not([selected="true"]) {
-  background-image: -moz-linear-gradient(hsla(0,0%,40%,.6), hsla(0,0%,30%,.6) 50%);
+  background-image: linear-gradient(hsla(0,0%,40%,.6), hsla(0,0%,30%,.6) 50%);
 }
 
 .tabbrowser-tab > .tab-stack > .tab-background > .tab-background-start:-moz-lwtheme-darktext:not([selected="true"]),
 .tabbrowser-tab > .tab-stack > .tab-background > .tab-background-middle:-moz-lwtheme-darktext:not([selected="true"]),
 .tabbrowser-tab > .tab-stack > .tab-background > .tab-background-end:-moz-lwtheme-darktext:not([selected="true"]) {
-  background-image: -moz-linear-gradient(hsla(0,0%,60%,.5), hsla(0,0%,45%,.5) 50%);
+  background-image: linear-gradient(hsla(0,0%,60%,.5), hsla(0,0%,45%,.5) 50%);
 }
 
 #tabbrowser-tabs[tabsontop="true"] > .tabbrowser-tab > .tab-stack > .tab-content,
@@ -1997,12 +2038,12 @@ toolbarbutton.chevron > .toolbarbutton-menu-dropmarker {
   padding-top: 2px;
 }
 
-#TabsToolbar[tabsontop="true"] {
+#TabsToolbar[tabsontop="true"]:not(:-moz-lwtheme) {
   padding-bottom: 2px;
   background-image: url(chrome://browser/skin/tabbrowser/tabbar-top-bg-active.png);
 }
 
-#TabsToolbar[tabsontop="true"]:-moz-window-inactive {
+#TabsToolbar[tabsontop="true"]:not(:-moz-lwtheme):-moz-window-inactive {
   background-image: url(chrome://browser/skin/tabbrowser/tabbar-top-bg-inactive.png);
 }
 
@@ -3494,7 +3535,7 @@ panel[type="arrow"][popupid="click-to-play-plugins"] > .panel-arrowcontainer > .
   background-image: url("chrome://browser/skin/privatebrowsing-mask.png");
   background-position: top right;
   background-repeat: no-repeat;
-  background-color: -moz-mac-chrome-active;
+  background-color: #A7A7A7;
 }
 
 #main-window[privatebrowsingmode=temporary] {
@@ -3514,7 +3555,7 @@ panel[type="arrow"][popupid="click-to-play-plugins"] > .panel-arrowcontainer > .
 }
 
 #main-window[privatebrowsingmode=temporary]:-moz-window-inactive {
-  background-color: -moz-mac-chrome-inactive;
+  background-color: #D8D8D8;
 }
 
 #main-window[privatebrowsingmode=temporary][inFullscreen] #nav-bar[tabsontop=false] {

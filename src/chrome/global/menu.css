@@ -40,7 +40,8 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 menu,
-menuitem {
+menuitem,
+.splitmenu-menuitem {
   -moz-appearance: none;
   -moz-box-align: center;
   color: black;
@@ -54,9 +55,12 @@ menuitem[default="true"] {
   font-weight: bold;
 }
 
-menu[disabled="true"], menuitem[disabled="true"],
+menu[disabled="true"],
+menuitem[disabled="true"],
+.splitmenu-menuitem[disabled="true"], 
 menu[_moz-menuactive="true"][disabled="true"],
-menuitem[_moz-menuactive="true"][disabled="true"] {
+menuitem[_moz-menuactive="true"][disabled="true"],
+.splitmenu-menuitem[_moz-menuactive="true"][disabled="true"] {
   color: gray;
   text-shadow: none;
 }
@@ -144,9 +148,20 @@ menubar > menu {
   margin: 1px 0;
 }
 
-menubar > menu[_moz-menuactive="true"][open="true"] {
+menubar > menu[_moz-menuactive="true"][open="true"],
+menubar > menu:-moz-lwtheme[_moz-menuactive="true"]:not([disabled="true"]) {
   color: #FFFFFF !important;
   background: -moz-linear-gradient(#6483f8, #2255f5);
+  text-shadow: none;
+}
+
+menubar > menu:-moz-lwtheme {
+  -moz-appearance: none;
+  border-style: none;
+}
+
+menubar > menu:-moz-lwtheme:not([disabled="true"]) {
+  color: inherit !important;
 }
 
 /* ..... internal content .... */
@@ -170,7 +185,8 @@ menupopup > menuitem {
 }
 
 menu[_moz-menuactive="true"],
-menuitem[_moz-menuactive="true"] {
+menuitem[_moz-menuactive="true"],
+.splitmenu-menuitem[_moz-menuactive="true"] {
   color: #FFFFFF !important;
   background: -moz-linear-gradient(#6483f8, #2255f5);
 }
