@@ -2141,10 +2141,21 @@ toolbarbutton.chevron > .toolbarbutton-menu-dropmarker {
   list-style-image: url("chrome://browser/skin/tabbrowser/tab-arrow-left.png");
 }
 
+.tabbrowser-arrowscrollbox > .scrollbutton-up:-moz-locale-dir(ltr):-moz-lwtheme-brighttext,
+.tabbrowser-arrowscrollbox > .scrollbutton-down:-moz-locale-dir(rtl):-moz-lwtheme-brighttext {
+  list-style-image: url("chrome://browser/skin/tabbrowser/tab-arrow-left-inverted.png");
+}
+
 .tabbrowser-arrowscrollbox > .scrollbutton-down:-moz-locale-dir(ltr),
 .tabbrowser-arrowscrollbox > .scrollbutton-up:-moz-locale-dir(rtl) {
   list-style-image: url("chrome://browser/skin/tabbrowser/tab-arrow-right.png");
 }
+
+.tabbrowser-arrowscrollbox > .scrollbutton-down:-moz-locale-dir(ltr):-moz-lwtheme-brighttext,
+.tabbrowser-arrowscrollbox > .scrollbutton-up:-moz-locale-dir(rtl):-moz-lwtheme-brighttext {
+  list-style-image: url("chrome://browser/skin/tabbrowser/tab-arrow-right-inverted.png");
+}
+
 
 .tabbrowser-arrowscrollbox > .scrollbutton-up:hover,
 .tabbrowser-arrowscrollbox > .scrollbutton-down:hover {
@@ -2209,6 +2220,13 @@ toolbarbutton.chevron > .toolbarbutton-menu-dropmarker {
   -moz-image-region: rect(0, 18px, 20px, 0);
 }
 
+.tabs-newtab-button:-moz-lwtheme-brighttext,
+#TabsToolbar > #new-tab-button:-moz-lwtheme-brighttext,
+#TabsToolbar > toolbarpaletteitem > #new-tab-button:-moz-lwtheme-brighttext {
+  list-style-image: url(chrome://browser/skin/tabbrowser/newtab-inverted.png);
+  -moz-image-region: rect(0, 18px, 20px, 0);
+}
+
 .tabs-newtab-button:hover,
 #TabsToolbar > #new-tab-button:hover {
   -moz-image-region: rect(0, 36px, 20px, 18px);
@@ -2221,6 +2239,11 @@ toolbarbutton.chevron > .toolbarbutton-menu-dropmarker {
 
 #TabsToolbar > #alltabs-button {
   list-style-image: url(chrome://browser/skin/tabbrowser/alltabs-box-bkgnd-icon.png);
+  -moz-image-region: rect(0, 22px, 20px, 0);
+}
+
+#TabsToolbar > #alltabs-button:-moz-lwtheme-brighttext {
+  list-style-image: url(chrome://browser/skin/tabbrowser/alltabs-box-bkgnd-icon-inverted.png);
   -moz-image-region: rect(0, 22px, 20px, 0);
 }
 
