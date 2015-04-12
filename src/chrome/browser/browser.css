@@ -984,6 +984,15 @@ toolbar[mode="icons"] #zoom-in-button {
   -moz-image-region: rect(0, 460px, 20px, 440px);
 }
 
+/* download status button */
+#status4evar-download-button #status4evar-download-icon,
+#status4evar-download-button:-moz-lwtheme-brighttext #status4evar-download-icon {
+  background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"),
+                              0, 140, 20, 120) !important;
+  width:20px;
+  height:20px;
+}
+
 
 /* ----- FULLSCREEN WINDOW CONTROLS ----- */
 
