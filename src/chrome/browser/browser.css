@@ -2111,12 +2111,25 @@ toolbarbutton.chevron > .toolbarbutton-menu-dropmarker {
   cursor: default;
 }
 
+.tab-close-button:-moz-lwtheme-brighttext {
+  list-style-image: url("chrome://global/skin/icons/closetab-inverted.png");
+}
+
 .tab-close-button:hover {
   list-style-image: url("chrome://global/skin/icons/closetab-hover.png");
 }
 
+.tab-close-button:-moz-lwtheme-brighttext:hover {
+  list-style-image: url("chrome://global/skin/icons/closetab-hover-inverted.png");
+}
+
+
 .tab-close-button:hover:active {
   list-style-image: url("chrome://global/skin/icons/closetab-active.png");
+}
+
+.tab-close-button:-moz-lwtheme-brighttext:hover:active {
+  list-style-image: url("chrome://global/skin/icons/closetab-active-inverted.png");
 }
 
 .tabbrowser-arrowscrollbox > .scrollbutton-up,
