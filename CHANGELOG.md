@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.0.2
+- smooth caption buttons
+- add inverted icons for dark personas
+
 ### 1.0.1
 - persona support
 - devtools fix
