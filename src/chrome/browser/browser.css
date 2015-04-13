@@ -2120,7 +2120,7 @@ toolbarbutton.chevron > .toolbarbutton-menu-dropmarker {
   cursor: default;
 }
 
-.tab-close-button:-moz-lwtheme-brighttext {
+.tabbrowser-tabs[tabsontop="false"] > * > * > * > .tab-close-button:-moz-lwtheme-brighttext {
   list-style-image: url("chrome://global/skin/icons/closetab-inverted.png");
 }
 
@@ -2128,7 +2128,7 @@ toolbarbutton.chevron > .toolbarbutton-menu-dropmarker {
   list-style-image: url("chrome://global/skin/icons/closetab-hover.png");
 }
 
-.tab-close-button:-moz-lwtheme-brighttext:hover {
+.tabbrowser-tabs[tabsontop="false"] > * > * > * > .tab-close-button:-moz-lwtheme-brighttext:hover {
   list-style-image: url("chrome://global/skin/icons/closetab-hover-inverted.png");
 }
 
@@ -2137,7 +2137,7 @@ toolbarbutton.chevron > .toolbarbutton-menu-dropmarker {
   list-style-image: url("chrome://global/skin/icons/closetab-active.png");
 }
 
-.tab-close-button:-moz-lwtheme-brighttext:hover:active {
+.tabbrowser-tabs[tabsontop="false"] > * > * > * > .tab-close-button:-moz-lwtheme-brighttext:hover:active {
   list-style-image: url("chrome://global/skin/icons/closetab-active-inverted.png");
 }
 
