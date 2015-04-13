@@ -80,8 +80,7 @@
 #toolbar-menubar:-moz-lwtheme,
 #addon-bar:-moz-lwtheme,
 #nav-bar:-moz-lwtheme,
-#titlebar:-moz-lwtheme,
-#main-window[privatebrowsingmode=temporary] #nav-bar[tabsontop=false] {
+#titlebar:-moz-lwtheme {
   -moz-appearance: none !important;
   background: none !important;
   /* Switching to a lightweight theme shouldn't move the content area,
@@ -115,37 +114,6 @@
 #nav-bar[mode="full"] {
   min-height: 48px;
 }
-
-/*
-#TabsToolbar {
-  background-image: -moz-linear-gradient(top, #B8B8B8 1px, #595959 1px,
-    #595959 2px, #757575 2px, #757575 3px, #818181 3px, #8E8E8E 23px,
-    #8E8E8E 24px, #979797 24px, #979797 25px, #686868 25px);
-}
-
-#TabsToolbar[tabsontop="true"] {
-  background-image: -moz-linear-gradient(top, #BCBCBC, #818181 24px,
-    #4F4F4F 24px, #4F4F4F 25px, #E3E3E3 25px);
-}
-
-#TabsToolbar:-moz-window-inactive {
-  background-image: -moz-linear-gradient(top, #DFDFDF 1px, #7E7E7E 1px,
-    #7E7E7E 2px, #A7A7A7 2px, #A7A7A7 3px, #B6B6B6 3px, #CBCBCB 23px,
-    #CBCBCB 24px, #D7D7D7 24px, #D7D7D7 25px, #959595 25px);
-}
-
-#TabsToolbar[tabsontop="true"]:-moz-window-inactive {
-  background-image: -moz-linear-gradient(top, #E1E1E1, #B1B1B1 24px,
-    #898989 24px, #898989 25px, #ECECEC 25px);
-}*/
-/*
-#tabbrowser-tabs[tabsontop="true"] > .tabbrowser-tab {
-  background-image: -moz-linear-gradient(top, #BEBEBE, #868686);
-}
-
-#tabbrowser-tabs[tabsontop="true"] > .tabbrowser-tab[selected="true"] {
-  background-color: transparent;
-}*/
 
 #toolbar-menubar {
  -moz-appearance: none;
@@ -203,10 +171,10 @@
 
 #appmenu-button, #appmenu-toolbar-button {
   -moz-appearance: none;
-  background-image: -moz-linear-gradient(#F2F2F2, #B2B2B2 95%);
-  background-clip: padding-box;
-  border-radius: 0 0 4px 4px;
-  border: 1px solid rgb(83,83,83,.9);
+  border: 1px solid rgba(59, 59, 59, 0.9);
+  border-radius: 0px 0px 3px 3px;
+  box-shadow: 0 1px rgba(255, 255, 255, 0.2);
+  background: -moz-linear-gradient(top, #FFF, #ADADAD) repeat-x;
   border-top: none;
   padding: 0px 6px 0 9px;
   margin: 0 0 0px 3px;
@@ -218,17 +186,34 @@
   font-weight: normal !important;
 }
 
+#main-window:not([privatebrowsingmode=temporary]) #appmenu-button:-moz-window-inactive,
+#main-window:not([privatebrowsingmode=temporary]) #appmenu-toolbar-button:-moz-window-inactive {
+  border-color: rgba(146, 146, 146, 0.84);
+  background-image: -moz-linear-gradient(top, #FFF, #CCC);
+}  
+
+#appmenu-button:hover,
+#appmenu-toolbar-button:hover {
+  background-image: -moz-linear-gradient(top, #9E9E9E, #D3D3D3);
+}  
+
 #main-window[privatebrowsingmode=temporary] #appmenu-button,
 #main-window[privatebrowsingmode=temporary] #appmenu-toolbar-button {
   background-image: -moz-linear-gradient(#D070E6, #7C2D94 95%);
   border-color: rgba(43,8,65,.9);
 }
 
+#main-window[privatebrowsingmode=temporary] #appmenu-button:-moz-window-inactive,
+#main-window[privatebrowsingmode=temporary] #appmenu-toolbar-button:-moz-window-inactive {
+  background-image: -moz-linear-gradient(#D070E6, #A63DC6 95%);
+  border-color: rgba(89,17,137,.9);
+}
+
 #appmenu-button:hover:active, #appmenu-button[open],
 #appmenu-toolbar-button:hover:active, #appmenu-toolbar-button[open] {
-  background-image: -moz-linear-gradient(#C8C8C8, #808080 95%);
-  box-shadow: 0 2px 3px rgba(0,0,0,.4) inset,
-              0 1px 1px rgba(0,0,0,.2) inset;
+  background: #B5B5B5;
+  text-shadow: 0 1px rgba(255, 255, 255, .4);
+  box-shadow: inset rgba(0, 0, 0, 0.3) 0 -6px 10px, inset #000 0 1px 3px, inset rgba(0, 0, 0, 0.2) 0 1px 3px, 0 1px rgba(255, 255, 255, .4);
 }
 
 #main-window[privatebrowsingmode=temporary] #appmenu-button:hover:active,
@@ -276,8 +261,7 @@
   -moz-border-end: none;
 }
 #appmenuSecondaryPane {
-  background-color: #f1f5fb;
-  box-shadow: 1px 0 2px rgb(204,214,234) inset;
+  background-color: #DDE4EA;
   -moz-padding-start: 3px;
   -moz-padding-end: 2px;
   padding-top: 2px;
