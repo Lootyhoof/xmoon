@@ -209,11 +209,17 @@
   border-color: rgba(89,17,137,.9);
 }
 
+#main-window[privatebrowsingmode=temporary] #appmenu-button:hover,
+#main-window[privatebrowsingmode=temporary] #appmenu-toolbar-button:hover {
+  background-image: -moz-linear-gradient(top, #6D2982, #D070E6);
+}
+
 #appmenu-button:hover:active, #appmenu-button[open],
 #appmenu-toolbar-button:hover:active, #appmenu-toolbar-button[open] {
   background: #B5B5B5;
   text-shadow: 0 1px rgba(255, 255, 255, .4);
   box-shadow: inset rgba(0, 0, 0, 0.3) 0 -6px 10px, inset #000 0 1px 3px, inset rgba(0, 0, 0, 0.2) 0 1px 3px, 0 1px rgba(255, 255, 255, .4);
+  border-radius: 0px;
 }
 
 #main-window[privatebrowsingmode=temporary] #appmenu-button:hover:active,
@@ -1068,6 +1074,11 @@ toolbar[mode="icons"] #zoom-in-button {
 
 #identity-icon-labels {
   margin: 0 4px 1px;
+}
+
+#notification-popup-box:not([hidden]) + #identity-box {
+  -moz-padding-start: 10px;
+  border-radius: 0;
 }
 
 .urlbar-input-box {
@@ -2433,10 +2444,11 @@ toolbarbutton.chevron > .toolbarbutton-menu-dropmarker {
   background-color: #fff;
   background-clip: padding-box;
   padding-left: 3px;
-  border-radius: 2px 0 0 2px;
+  border-radius: 2.5px 0 0 2.5px;
   border-width: 0 8px 0 0;
   border-style: solid;
   border-image: url("chrome://browser/skin/urlbar-arrow.png") 0 8 0 0 fill;
+  -moz-margin-end: -8px;
 }
 
 window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"],#nav-bar:not([currentset])) > #unified-back-forward-button[forwarddisabled] + #urlbar-container > #urlbar > #notification-popup-box {
