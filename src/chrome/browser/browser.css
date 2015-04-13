@@ -61,7 +61,7 @@
   top: 9px !important;
 }
 
-#main-window:-moz-lwtheme-brighttext:after {
+#main-window:-moz-lwtheme:after {
   color: inherit !important;
   text-shadow: inherit !important;
 }
