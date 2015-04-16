@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.0.3
+- invert close buttons on dark personas when tabs are not on top
+- style Status4Evar download status icon
+- persona titlebar improvements
+- appmenu-button appearance improvements
+
 ### 1.0.2
 - smooth caption buttons
 - add inverted icons for dark personas
