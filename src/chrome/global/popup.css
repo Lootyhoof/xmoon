@@ -70,6 +70,7 @@ panel[type="arrow"] {
   transition: opacity 300ms;
 }
 
+@media (-moz-windows-default-theme) {
 .panel-arrowcontainer[panelopen] {
   transition-duration: 200ms, 150ms;
   transition-property: opacity, transform;
@@ -96,6 +97,11 @@ panel[type="arrow"] {
   transform: translateX(20px);
 }
 
+.panel-arrow {
+  opacity: 0.97;
+}
+}
+
 panel[type="arrow"][side="top"],
 panel[type="arrow"][side="bottom"] {
   margin-left: -26px;
@@ -118,10 +124,6 @@ panel[type="arrow"][side="right"] {
   color: #333;
   padding: 16px;
   margin: 1px;
-}
-
-.panel-arrow {
-  opacity: 0.97;
 }
 
 .panel-arrow[side="top"] {
