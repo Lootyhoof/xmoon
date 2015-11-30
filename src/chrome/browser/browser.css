@@ -569,6 +569,10 @@ toolbarbutton.bookmark-item > menupopup {
   background-origin: border-box;
 }
 
+.toolbarbutton-1[type="menu"] {
+  -moz-box-orient: horizontal;
+}
+
 toolbar[mode="icons"] .toolbarbutton-1:not([type="menu-button"]) {
   height: 22px;
 }
