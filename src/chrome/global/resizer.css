@@ -8,7 +8,7 @@ resizer {
   -moz-appearance: none;
   background: url("chrome://global/skin/icons/resizer.png") no-repeat;
   background-size: 15px 15px;
-  background-position: -1px 8px;
+  background-position: 0% 90%;
   cursor: se-resize;
   min-width: 15px;
   width: 15px;
