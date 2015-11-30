@@ -134,9 +134,8 @@
 }
 
 #addon-bar:-moz-window-inactive {
-  background: #D8D8D8;
-  border-top: 1px solid gray;
-  border-bottom: 1px solid gray;
+  background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.32) 1px, #E8E8E8 1px,
+    #E8E8E8 2px, #CACACA 2px, #E1E1E1 95%);
 }  
 
 #navigator-toolbox[tabsontop="true"] > #nav-bar,
@@ -3827,7 +3826,18 @@ panel[dimmed="true"] {
 #addon-bar {
   -moz-appearance: none;
   background-image: -moz-linear-gradient(#515151 1px, #E8E8E8 1px,
-    #E8E8E8 2px, #CACACA 2px, #A7A7A7 95%, #515151 95%);
+    #E8E8E8 2px, #CACACA 2px, #A7A7A7 95%);
+}
+
+@media (-moz-os-version: windows-vista),
+       (-moz-os-version: windows-win7),
+	   (-moz-os-version: windows-win8) {
+  @media not all and (-moz-windows-classic) {
+	#addon-bar {
+	  background-image: -moz-linear-gradient(#515151 1px, #E8E8E8 1px,
+        #E8E8E8 2px, #CACACA 2px, #A7A7A7 95%, #515151 95%);
+	}
+  }
 }
 
 /* Add-on bar close button */
