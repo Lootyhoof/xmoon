@@ -2741,8 +2741,8 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 /*** Status and progress indicator ***/
 
 #downloads-indicator-anchor {
-  min-width: 20px;
-  min-height: 20px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 #downloads-animation-container {
