@@ -569,7 +569,7 @@ toolbarbutton.bookmark-item > menupopup {
   background-origin: border-box;
 }
 
-.toolbarbutton-1[type="menu"] {
+.toolbarbutton-1[type="menu"]:not(:-moz-any(#back-button, #forward-button)) {
   -moz-box-orient: horizontal;
 }
 
