@@ -1,5 +1,17 @@
 # Changelog
 
+### 1.2.0
+- (PM26) add history menu button
+- show more icons in history/bookmarks menus
+- use correct styling for alert box
+- use more OS X-like resizer styling
+- change addon-bar background if not on Vista/7/8
+- prevent downloads button from growing
+- use more up-to-date about pages (from FF24 OS X)
+- fix go-button styling
+- fix mapping of "switch to tab" image in urlbar
+- fix positioning of menu-button dropmarkers
+
 ### 1.1.0
 - Pale Moon v26 compatibility
 - remove popup animations on non-Windows (fixes Linux popups)
