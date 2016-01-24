@@ -2540,28 +2540,30 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
   list-style-image: url(chrome://browser/skin/notification-pluginNormal.png);
 }
 
-#plugins-notification-icon.plugin-hidden {
+#alert-plugins-notification-icon {
   list-style-image: url(chrome://browser/skin/notification-pluginAlert.png);
 }
 
-#plugins-notification-icon.plugin-blocked {
+#blocked-plugins-notification-icon {
   list-style-image: url(chrome://browser/skin/notification-pluginBlocked.png);
 }
 
-#plugins-notification-icon {
+#plugins-notification-icon,
+#alert-plugins-notification-icon,
+#blocked-plugins-notification-icon {
   -moz-image-region: rect(0, 16px, 16px, 0);
 }
 
-#plugins-notification-icon:hover {
+#plugins-notification-icon:hover,
+#alert-plugins-notification-icon:hover,
+#blocked-plugins-notification-icon:hover {
   -moz-image-region: rect(0, 32px, 16px, 16px);
 }
 
-#plugins-notification-icon:active {
+#plugins-notification-icon:active,
+#alert-plugins-notification-icon:active,
+#blocked-plugins-notification-icon:active {
   -moz-image-region: rect(0, 48px, 16px, 32px);
-}
-
-#plugin-install-notification-icon {
-  list-style-image: url(chrome://browser/skin/pluginInstall-16.png);
 }
 
 #notification-popup-box[hidden] {
