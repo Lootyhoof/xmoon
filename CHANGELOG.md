@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.2.2
+- use correct selectors for plugin alert icons
+
 ### 1.2.1
 - (PM26) add download location styling
 - fix popup cancel button
