@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.2.3
+- refactor media controls for Pale Moon 26.3
+- use unified close button icons
+
 ### 1.2.2
 - use correct selectors for plugin alert icons
 
