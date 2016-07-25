@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.3.0
+- use native titlebar styling on compositor-mode Windows
+- fix tab close button styling
+
 ### 1.2.3
 - refactor media controls for Pale Moon 26.3
 - use unified close button icons
