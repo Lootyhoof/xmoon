@@ -2,6 +2,8 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+@import url("chrome://appver/skin/downloads.css");
+ 
 /*** Panel and outer controls ***/
 
 #downloadsPanel > .panel-arrowcontainer > .panel-arrowcontent {
@@ -32,12 +34,6 @@
 #downloadsPanel:not([hasdownloads]) > #downloadsFooter > #downloadsHistory {
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
-}
-
-#downloadsPanel[hasdownloads] > #downloadsFooter {
-  background: #e5e5e5;
-  border-top: 1px solid hsla(0,0%,0%,.1);
-  box-shadow: 0 -1px hsla(0,0%,100%,.5) inset, 0 1px 1px hsla(0,0%,0%,.03) inset;
 }
 
 #downloadsHistory > .button-box {
