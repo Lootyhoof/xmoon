@@ -32,6 +32,35 @@
 	padding: 2px 4px;
 }
 
+/*
+ * Options button
+ */
+
+#status4evar-options-button
+{
+	list-style-image: url("chrome://browser/skin/statusbar/pms24.png");
+}
+
+toolbar[iconsize="small"] #status4evar-options-button
+{
+	list-style-image: url("chrome://browser/skin/statusbar/pms16.png");
+}
+
+/*
+ * Download status
+ */
+
+toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"],
+toolbar[mode="text"] #status4evar-download-button
+{
+	-moz-box-orient: horizontal !important;
+}
+
+toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"] > label
+{
+	display: -moz-box !important;
+}
+
 #status4evar-download-progress-bar
 {
 	border: 1px solid gray;
@@ -70,6 +99,21 @@
 	background-repeat: no-repeat;
 	width: 16px;
 	height: 16px;
+}
+
+#status4evar-download-button #status4evar-download-icon
+{
+	background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"), 0, 108, 18, 90) center no-repeat;
+}
+
+#status4evar-download-button:-moz-lwtheme-brighttext #status4evar-download-icon
+{
+	background: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted.png"), 0, 108, 18, 90) center no-repeat;
+}
+
+#status4evar-download-button[attention] #status4evar-download-icon
+{
+	background-image: url("chrome://browser/skin/downloads/download-glow.png");
 }
 
 @keyframes status4evar-download-notification-finish
@@ -377,4 +421,3 @@ splitter.status4evar-status-splitter
 {
 	border: none !important;
 }
-
