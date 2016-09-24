@@ -2,3 +2,5 @@ skin browser      xmoon chrome/browser/
 skin communicator xmoon chrome/communicator/
 skin mozapps      xmoon chrome/mozapps/
 skin global       xmoon chrome/global/
+skin appver       xmoon chrome/appver/26/ appversion<27.0.0b1
+skin appver       xmoon chrome/appver/27/ appversion>=27.0.0b1
