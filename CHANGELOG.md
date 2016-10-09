@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.4.0
+- PM27: add statusbar styling
+- PM27: add styling for downloads panel components
+- PM27: style devtools
+- improve appearance of about:
+
 ### 1.3.0
 - use native titlebar styling on compositor-mode Windows
 - fix tab close button styling
