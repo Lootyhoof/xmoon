@@ -9,15 +9,16 @@
 
   <Description about="urn:mozilla:install-manifest">
     <em:id>{60e12e8a-8197-4391-b98e-98e62085837f}</em:id>
-	<em:version>1.3.0</em:version>
-	<em:name>XMoon</em:name>
-	<em:description>MacOSX theme for Pale Moon. Fork of "MacOSX Theme (Firefox 4+)" by GOLF-AT</em:description>
-	<em:creator>Lootyhoof</em:creator>
+    <em:version>1.4.0</em:version>
+    <em:name>XMoon</em:name>
+    <em:description>MacOSX theme for Pale Moon. Fork of "MacOSX Theme (Firefox 4+)" by GOLF-AT</em:description>
+    <em:creator>Lootyhoof</em:creator>
     <em:type>4</em:type>
     <em:internalName>xmoon</em:internalName>
+    <em:skinnable>true</em:skinnable>
 	
-	<em:contributor>GOLF-AT</em:contributor>
-	<em:contributor>Mozilla</em:contributor>
+    <em:contributor>GOLF-AT</em:contributor>
+    <em:contributor>Mozilla</em:contributor>
     
     <em:targetApplication>
       <Description>
