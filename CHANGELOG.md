@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.4.1
+- fix alltabs closebutton icon
+- initial macOS support (EXPERIMENTAL)
+
 ### 1.4.0
 - PM27: add statusbar styling
 - PM27: add styling for downloads panel components
