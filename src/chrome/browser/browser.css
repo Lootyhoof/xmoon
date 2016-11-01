@@ -2272,11 +2272,17 @@ toolbarbutton.chevron > .toolbarbutton-menu-dropmarker {
 .tabs-closebutton {
   -moz-padding-end: 4px;
   list-style-image: url("chrome://global/skin/icons/closetab.png");
+  -moz-image-region: auto;
   border: none;
+}
+
+.tabs-closebutton:hover {
+  -moz-image-region: auto;
 }
 
 .tabs-closebutton:hover:active {
   list-style-image: url("chrome://global/skin/icons/closetab-active.png");
+  -moz-image-region: auto;
 }
 
 /* Bookmarks toolbar */
