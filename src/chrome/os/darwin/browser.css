@@ -1,0 +1,13 @@
+#main-window {
+  -moz-appearance: none;
+  background-color: #eeeeee;
+}
+
+#titlebar-buttonbox-container,
+#main-window:not([drawintitlebar=true]) > #titlebar {
+  display: none;
+}
+
+#titlebar {
+  height: 22px;
+}

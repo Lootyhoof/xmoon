@@ -4,3 +4,5 @@ skin mozapps      xmoon chrome/mozapps/
 skin global       xmoon chrome/global/
 skin appver       xmoon chrome/appver/26/ appversion<27.0.0b1
 skin appver       xmoon chrome/appver/27/ appversion>=27.0.0b1
+skin os           xmoon chrome/os/darwin/ os=Darwin
+skin os           xmoon chrome/os/general/ os!=Darwin

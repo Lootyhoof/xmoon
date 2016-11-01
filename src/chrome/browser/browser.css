@@ -45,6 +45,7 @@
 @import url("chrome://global/skin/");
 @import url("chrome://browser/skin/padlock/padlock.css");
 @import url("chrome://appver/skin/browser.css");
+@import url("chrome://os/skin/browser.css");
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @namespace html url("http://www.w3.org/1999/xhtml");
@@ -356,103 +357,6 @@
 #menu_showAllHistory,
 #HMB_showAllHistory {
   list-style-image: url("chrome://browser/skin/places/history.png");
-}
-
-/* ::::: titlebar ::::: */
-
-@media (-moz-windows-compositor) {
-  #main-window[sizemode="normal"] > #titlebar {
-    -moz-appearance: -moz-window-titlebar;
-  }
-
-  #main-window[sizemode="maximized"] > #titlebar {
-    -moz-appearance: -moz-window-titlebar-maximized;
-  }
-
-  @media all and (-moz-windows-classic) {
-    #main-window[sizemode="normal"] > #titlebar > #titlebar-content > #appmenu-button-container {
-      margin-top: 4px;
-    }
-  }
-
-  #titlebar-buttonbox {
-    -moz-appearance: -moz-window-button-box;
-  }
-
-  #main-window[sizemode="maximized"] #titlebar-buttonbox {
-    -moz-appearance: -moz-window-button-box-maximized;
-  }
-
-  .titlebar-placeholder[type="appmenu-button"] {
-    margin-left: 4px;
-    margin-right: 14px; /* Extra space for Aero Snap - some clear glass to be dragabble.  Also looks OK outside of Aero. */
-  }
-
-  .titlebar-placeholder[type="caption-buttons"] {
-    margin-left: 20px; /* Extra space for Aero Snap - some clear glass to be dragabble.  Also looks OK outside of Aero. */
-  }
-
-  /* titlebar command buttons */
-
-  #titlebar-min {
-    -moz-appearance: -moz-window-button-minimize;
-  }
-
-  #titlebar-max {
-    -moz-appearance: -moz-window-button-maximize;
-  }
-
-  #main-window[sizemode="maximized"] #titlebar-max {
-    -moz-appearance: -moz-window-button-restore;
-  }
-
-  #titlebar-close {
-    -moz-appearance: -moz-window-button-close;
-  }
-
-  @media not all and (-moz-windows-classic) {
-    #titlebar-min {
-      -moz-margin-end: 2px;
-    }
-  }
-}
-
-@media not all and (-moz-windows-compositor) {
-  #titlebar {
-    background-image: -moz-linear-gradient(top, #D0D0D0, #BCBCBC);
-  }
-
-  #titlebar:-moz-window-inactive {
-    background-image: -moz-linear-gradient(top, #EDEDED, #E1E1E1);
-  }
-
-  #main-window[sizemode="maximized"] #titlebar {
-    margin-top: 4px !important;
-  }
-
-  #titlebar-buttonbox {
-    width: 63px !important;
-    height: 16px !important;
-    margin: 3px 0px 0 0 !important;
-    padding: 0px 0px 0 0 !important;
-    background: url("chrome://browser/skin/sysbtn-active.png") no-repeat !important;
-  }
-
-  #titlebar-buttonbox:hover {
-    background: url("chrome://browser/skin/sysbtn-hover.png") no-repeat !important;
-  }
-
-  #titlebar-buttonbox:-moz-window-inactive {
-    background: url("chrome://browser/skin/sysbtn-inactive.png") no-repeat !important;
-  }
-
-  #titlebar-min, #titlebar-max, #titlebar-close {
-    -moz-appearance: none;
-    border: none;
-    width: 14px !important;
-    height: 14px !important;
-    margin: 1px 3px 1px 3px !important;
-  } 
 }
 
 /* ----- BOOKMARK TOOLBAR ----- */
