@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.5.0
+- support PM27's devtools
+- drop PM26 support
+
 ### 1.4.1
 - fix alltabs closebutton icon
 - initial macOS support (EXPERIMENTAL)
