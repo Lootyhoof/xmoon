@@ -1,5 +1,10 @@
 # Changelog
 
+### 1.5.1
+- fix download animation
+- allow extensions to style their own toolbarbutton-badge
+- sync devtools styling with default
+
 ### 1.5.0
 - support PM27's devtools
 - drop PM26 support
