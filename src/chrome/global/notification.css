@@ -26,6 +26,11 @@ notification[type="critical"] {
   border-bottom: 1px solid #5d0000;
 }
 
+.messageText > .text-link {
+  color: inherit !important;
+  text-decoration: underline;
+}
+
 .messageImage {
   width: 16px;
   height: 16px;
@@ -75,6 +80,14 @@ notification[type="critical"] .messageImage {
 
 .popup-notification-description {
   max-width: 248px;
+}
+
+.popup-notification-learnmore-link {
+  margin-top: 1em !important;
+}
+
+.popup-notification-learnmore-link:not([href]) {
+  display: none;
 }
 
 .popup-notification-menubutton {
