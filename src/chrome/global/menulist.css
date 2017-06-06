@@ -52,7 +52,7 @@ menulist {
   margin: 2px 2px;
   padding: 1px 0px 1px 2px;
   border: 1px solid #A0A0A0;
-  background-color: -moz-Field;
+  background-color: #FFFFFF;
   border-radius: 4px 4px 4px 4px;
   min-height: 20px !important;
   color: -moz-DialogText;
@@ -134,8 +134,8 @@ menulist[editable="true"][open="true"] > .menulist-dropmarker {
   margin: 2px 2px;
   padding: 1px 0px 1px 2px;
   border: 1px solid #A0A0A0;
-  background-color: -moz-Field;
-  color: -moz-FieldText;
+  background-color: #FFFFFF;
+  color: #000000;
   -moz-box-align: center;
 }
 

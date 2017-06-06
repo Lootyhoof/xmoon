@@ -245,8 +245,8 @@
 
 #placeContent > treechildren::-moz-tree-row(selected, focus), 
 #placeContent > treechildren::-moz-tree-row(odd, selected, focus) {
-  background-color: Highlight;
-  color: HighlightText !important;
+  background-color: #6483f8;
+  color: #FFFFFF !important;
 }
 
 #placeContent > treechildren::-moz-tree-cell,

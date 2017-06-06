@@ -195,7 +195,7 @@ treechildren::-moz-tree-cell-text(title, separator) {
 }
 
 treechildren::-moz-tree-cell-text(title, separator, selected, focus) {
-  color: HighlightText;
+  color: #FFFFFF;
 }
 
 treechildren::-moz-tree-twisty(title, separator) {

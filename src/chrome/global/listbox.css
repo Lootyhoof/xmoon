@@ -43,7 +43,7 @@ listbox {
   -moz-appearance: listbox;
   margin: 2px 4px;
   background-color: #FFFFFF;
-  color: -moz-FieldText;
+  color: #000000;
 }
 /*
 listbox:focus {
@@ -153,7 +153,7 @@ listheader[sortable="true"]:hover:active {
   border: 1px solid -moz-DialogText;
   min-width: 13px;
   min-height: 13px;
-  background: -moz-Field no-repeat 50% 50%;
+  background: #FFFFFF no-repeat 50% 50%;
 }
 
 .listcell-check[checked="true"] {

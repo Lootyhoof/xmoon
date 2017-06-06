@@ -188,8 +188,8 @@ richlistitem[type="download"]:last-child {
   border-radius: 3px;
   border-top: 1px solid hsla(0,0%,100%,.2);
   border-bottom: 1px solid hsla(0,0%,0%,.4);
-  background-color: Highlight;
-  color: HighlightText;
+  background-color: #6483f8;
+  color: #FFFFFF;
 }
 
 #downloadsPanel:not([keyfocus]) > #downloadsListBox > richlistitem[type="download"][state="1"][exists]:hover {

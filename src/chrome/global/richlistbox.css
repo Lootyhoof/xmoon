@@ -41,8 +41,8 @@
 richlistbox {
   -moz-appearance: listbox;
   margin: 2px 4px;
-  background-color: -moz-Field;
-  color: -moz-FieldText;
+  background-color: #FFFFFF;
+  color: #000000;
 }
 
 richlistbox[disabled="true"] {
@@ -55,8 +55,8 @@ richlistitem[selected="true"] {
 }
 
 richlistbox:focus > richlistitem[selected="true"] {
-  background-color: Highlight;
-  color: HighlightText;
+  background-color: #6483f8;
+  color: #FFFFFF;
 }
 
 richlistbox[seltype="multiple"]:focus > richlistitem[current="true"] {

@@ -83,19 +83,19 @@ tree[seltype="text"] > treechildren::-moz-tree-cell-text(active, selected) {
 }
 
 treechildren::-moz-tree-cell-text(selected, focus) {
-  color: HighlightText;
+  color: #FFFFFF;
 }
 
 tree[seltype="cell"] > treechildren::-moz-tree-cell(active, selected, focus) {
-  background-color: Highlight;
+  background-color: #6483f8;
 }
 tree[seltype="cell"] > treechildren::-moz-tree-cell-text(active, selected, focus) {
-  color: HighlightText;
+  color: #FFFFFF;
 }
 
 tree[seltype="text"] > treechildren::-moz-tree-cell-text(active, selected, focus) {
-  background-color: Highlight;
-  color: HighlightText;
+  background-color: #6483f8;
+  color: #FFFFFF;
 }
 
 /* ::::: lines connecting cells ::::: */
@@ -343,11 +343,11 @@ treechildren[alternatingbackground="true"]::-moz-tree-cell-text(odd, selected) {
 }
 
 treechildren[alternatingbackground="true"]::-moz-tree-row(odd, selected, focus) {
-  background-color: Highlight;
+  background-color: #6483f8;
 }
 
 treechildren[alternatingbackground="true"]::-moz-tree-cell-text(odd, selected, focus) {
-  color: HighlightText;
+  color: #FFFFFF;
 }
 
 /* ::::: editable tree ::::: */
@@ -363,10 +363,10 @@ treechildren::-moz-tree-cell-text(selected, editing) {
 .tree-input {
   -moz-appearance: none;
    border: 1px solid Highlight;
-  -moz-border-top-colors: Highlight;
-  -moz-border-bottom-colors: Highlight;
-  -moz-border-left-colors: Highlight;
-  -moz-border-right-colors: Highlight;
+  -moz-border-top-colors: #6483f8;
+  -moz-border-bottom-colors: #6483f8;
+  -moz-border-left-colors: #6483f8;
+  -moz-border-right-colors: #6483f8;
   margin: 0;
   -moz-margin-start: -3px;
   padding: 1px;

@@ -248,9 +248,9 @@ code {
 
 .nodeBox.selected > .nodeLabel > .nodeLabelBox,
 .nodeBox.selected > .nodeLabel {
-  border-color: Highlight;
-  background-color: Highlight;
-  color: HighlightText !important;
+  border-color: #6483f8;
+  background-color: #6483f8;
+  color: #FFFFFF !important;
 }
 
 .nodeBox.selected > .nodeLabel > .nodeLabelBox,
@@ -261,7 +261,7 @@ code {
 }
 
 .nodeBox.highlighted > .nodeLabel {
-  border-color: Highlight !important;
+  border-color: #6483f8 !important;
   background-color: cyan !important;
   color: #000000 !important;
 }

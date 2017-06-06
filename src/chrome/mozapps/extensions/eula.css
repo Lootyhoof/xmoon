@@ -27,8 +27,8 @@
 
 #eula {
   -moz-appearance: none;
-  color: -moz-FieldText;
-  background-color: -moz-Field;
+  color: #000000;
+  background-color: #FFFFFF;
   margin: 1em;
   border: 1px solid;
   -moz-border-top-colors: ActiveBorder;

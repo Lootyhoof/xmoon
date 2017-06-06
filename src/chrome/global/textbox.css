@@ -53,14 +53,14 @@ textbox {
   margin: 3px 4px;
   min-height: 20px;
   padding: 1px 2px 1px 2px ;
-  background-color: -moz-Field;
-  color: -moz-FieldText;
+  background-color: #FFFFFF;
+  color: #000000;
   border: 3px solid;
   border-radius: 2px;
-  -moz-border-top-colors: #848484 #D8D8D8 -moz-Field;
-  -moz-border-bottom-colors: #E1E1E1 #FEFEFE -moz-Field;
-  -moz-border-right-colors: #A8A8A8 #FEFEFE -moz-Field;
-  -moz-border-left-colors: #A8A8A8 #FEFEFE -moz-Field;
+  -moz-border-top-colors: #848484 #D8D8D8 #FFFFFF;
+  -moz-border-bottom-colors: #E1E1E1 #FEFEFE #FFFFFF;
+  -moz-border-right-colors: #A8A8A8 #FEFEFE #FFFFFF;
+  -moz-border-left-colors: #A8A8A8 #FEFEFE #FFFFFF;
 }
 
 textbox[empty="true"] {
@@ -90,10 +90,10 @@ html|*.textbox-input[type="search"] {
 
 textbox[focused="true"]:not([readonly="true"]):not([type="number"]) {
   box-shadow: 0 0 2px 1px #6483f8, 0 0 1px 1px #6483f8;
-  -moz-border-top-colors: #C0C0C0 #E8E8E8 -moz-Field;
-  -moz-border-bottom-colors: #E0E0E0 #FEFEFE -moz-Field;
-  -moz-border-right-colors: #E0E0E0 #FEFEFE -moz-Field;
-  -moz-border-left-colors: #E0E0E0 #FEFEFE -moz-Field;
+  -moz-border-top-colors: #C0C0C0 #E8E8E8 #FFFFFF;
+  -moz-border-bottom-colors: #E0E0E0 #FEFEFE #FFFFFF;
+  -moz-border-right-colors: #E0E0E0 #FEFEFE #FFFFFF;
+  -moz-border-left-colors: #E0E0E0 #FEFEFE #FFFFFF;
 }
 
 findbar textbox[focused="true"] {

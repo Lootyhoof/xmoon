@@ -50,8 +50,8 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 .console-box {
-  background-color: -moz-Field;
-  color: -moz-FieldText;
+  background-color: #FFFFFF;
+  color: #000000;
   overflow: auto;
 }
  

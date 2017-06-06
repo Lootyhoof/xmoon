@@ -75,7 +75,7 @@ panel[type="autocomplete"],
 panel[type="autocomplete-richlistbox"],
 .autocomplete-history-popup {
   padding: 0px !important;
-  background-color: -moz-Field;
+  background-color: #FFFFFF;
   font: icon;
   -moz-appearance: none;
 }
@@ -128,8 +128,8 @@ treechildren.autocomplete-treebody::-moz-tree-cell-text(selected) {
 }
 
 .autocomplete-richlistitem[selected="true"] {
-  background-color: Highlight;
-  color: HighlightText;
+  background-color: #6483f8;
+  color: #FFFFFF;
 }
 
 .autocomplete-richlistitem {

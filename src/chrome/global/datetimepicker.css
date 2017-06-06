@@ -56,8 +56,8 @@ datepicker, timepicker {
   border-top-right-radius: 2px;
   border-bottom-left-radius: 2px;
   padding: 0px;
-  background-color: -moz-Field;
-  color: -moz-FieldText;
+  background-color: #FFFFFF;
+  color: #000000;
 }
 
 .datetimepicker-input-subbox {
@@ -123,8 +123,8 @@ timepicker[disabled="true"] {
 }
 
 .datepicker-gridlabel[selected="true"] {
-  background-color: Highlight;
-  color: HighlightText;
+  background-color: #6483f8;
+  color: #FFFFFF;
 }
 
 .datepicker-button {

@@ -1968,6 +1968,7 @@ toolbarbutton.chevron > .toolbarbutton-menu-dropmarker {
 
 .tabbrowser-tab[selected="true"] {
   z-index: 1;
+  color: #000;
 }
 
 .tabbrowser-tab[selected="true"]:not([pinned]),
@@ -2126,7 +2127,7 @@ toolbarbutton.chevron > .toolbarbutton-menu-dropmarker {
 }
 
 .tabbrowser-arrowscrollbox > .scrollbutton-down[notifybgtab] {
-  background-color: Highlight;
+  background-color: #6483f8;
   -moz-transition: none;
 }
 
@@ -2292,8 +2293,8 @@ toolbarbutton.chevron > .toolbarbutton-menu-dropmarker {
 /* Bookmark drag and drop styles */
 
 .bookmark-item[dragover-into="true"] {
-  background: Highlight !important;
-  color: HighlightText !important;
+  background: #6483f8 !important;
+  color: #FFFFFF !important;
 }
 
 /* rules for menupopup drop indicators */
@@ -2308,7 +2309,7 @@ toolbarbutton.chevron > .toolbarbutton-menu-dropmarker {
   list-style-image: none;
   height: 2px;
   -moz-margin-end: -4em;
-  background-color: Highlight;
+  background-color: #6483f8;
 }
 
 #customizeToolbarSheetPopup {

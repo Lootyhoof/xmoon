@@ -48,7 +48,7 @@ menupopup, popup, panel {
   -moz-border-right-colors: ThreeDShadow white;
   padding: 1px 1px;
   min-width: 1px;
-  background-color: Menu;
+  background-color: #FFFFFF;
 }
 
 menupopup > menu > menupopup {

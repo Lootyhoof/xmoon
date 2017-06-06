@@ -180,6 +180,7 @@ menubar > menu:-moz-lwtheme:not([disabled="true"]) {
 
 menupopup > menu,
 menupopup > menuitem {
+  background: #FFFFFF;
   max-width: 42em;
   min-height: 19px;
 }
@@ -199,7 +200,7 @@ menulist > menupopup > menuitem,
 menulist > menupopup > menu {
   max-width: none;
   font: inherit;
-  color: -moz-FieldText;
+  color: #000000;
 }
 
 menulist > menupopup > menuitem {

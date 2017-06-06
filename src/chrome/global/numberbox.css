@@ -60,7 +60,7 @@ html|*.numberbox-input {
   -moz-border-left-colors: transparent #888888 #000000;
   border-top-right-radius: 2px;
   border-bottom-left-radius: 2px;
-  background-color: -moz-Field;
+  background-color: #FFFFFF;
 }
 
 textbox[focused="true"] .numberbox-input-box {
