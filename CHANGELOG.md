@@ -5,6 +5,7 @@
 - sync about:permissions styling with default
 - add image document favicon when viewing standalone images
 - fix "learn more" links in notification popups
+- improve appearance on darker system themes
 
 ### 1.5.1
 - fix download animation
