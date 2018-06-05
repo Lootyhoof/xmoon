@@ -1,46 +1,6 @@
-/* ***** BEGIN LICENSE BLOCK *****
- * Version: MPL 1.1/GPL 2.0/LGPL 2.1
- *
- * The contents of this file are subject to the Mozilla Public License Version
- * 1.1 (the "License"); you may not use this file except in compliance with
- * the License. You may obtain a copy of the License at
- * http://www.mozilla.org/MPL/
- *
- * Software distributed under the License is distributed on an "AS IS" basis,
- * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
- * for the specific language governing rights and limitations under the
- * License.
- *
- * The Original Code is mozilla.org code.
- *
- * The Initial Developer of the Original Code is
- * Netscape Communications Corporation.
- * Portions created by the Initial Developer are Copyright (C) 1998-1999
- * the Initial Developer. All Rights Reserved.
- *
- * Contributor(s):
- *   Joe Hewitt (hewitt@netscape.com)
- *   Jason Kersey (kerz@netscape.com)
- *   Pierre Chanial (chanial@noos.fr)
- *   Kevin Gerich (kevin@kmgerich.com)
- *   Pamela Greene (pamg.bugs@gmail.com)
- *   Dão Gottwald (dao@mozilla.com)
- *   Stephen Horlander (stephen@noved.org)
- *   Drew Willcoxon (adw@mozilla.com)
- *
- * Alternatively, the contents of this file may be used under the terms of
- * either the GNU General Public License Version 2 or later (the "GPL"), or
- * the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
- * in which case the provisions of the GPL or the LGPL are applicable instead
- * of those above. If you wish to allow use of your version of this file only
- * under the terms of either the GPL or the LGPL, and not to allow others to
- * use your version of this file under the terms of the MPL, indicate your
- * decision by deleting the provisions above and replace them with the notice
- * and other provisions required by the GPL or the LGPL. If you do not delete
- * the provisions above, a recipient may use your version of this file under
- * the terms of any one of the MPL, the GPL or the LGPL.
- *
- * ***** END LICENSE BLOCK ***** */
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 @import url("chrome://global/skin/");
 @import url("chrome://browser/skin/padlock/padlock.css");
@@ -1178,14 +1138,16 @@ toolbar[mode="icons"] #zoom-in-button {
 }
 
 .ac-result-type-bookmark,
-.autocomplete-treebody::-moz-tree-image(bookmark, treecolAutoCompleteImage) {
+.autocomplete-treebody::-moz-tree-image(bookmark, treecolAutoCompleteImage),
+.private-autocomplete-treebody::-moz-tree-image(bookmark, treecolAutoCompleteImage) {
   list-style-image: url("chrome://browser/skin/places/pageStarred.png");
   width: 16px;
   height: 16px;
 }
 
 .ac-result-type-keyword,
-.autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage) {
+.autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage),
+.private-autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage) {
   list-style-image: url(chrome://global/skin/icons/search-textbox.png);
   margin: 2px;
   width: 12px;
@@ -1193,13 +1155,15 @@ toolbar[mode="icons"] #zoom-in-button {
 }
 
 richlistitem[selected="true"][current="true"] > hbox > .ac-result-type-bookmark,
-.autocomplete-treebody::-moz-tree-image(selected, current, bookmark, treecolAutoCompleteImage) {
+.autocomplete-treebody::-moz-tree-image(selected, current, bookmark, treecolAutoCompleteImage),
+.private-autocomplete-treebody::-moz-tree-image(selected, current, bookmark, treecolAutoCompleteImage) {
   list-style-image: url("chrome://browser/skin/places/star-icons.png");
   -moz-image-region: rect(32px, 16px, 48px, 0px);
 }
 
 .ac-result-type-tag,
-.autocomplete-treebody::-moz-tree-image(tag, treecolAutoCompleteImage) {
+.autocomplete-treebody::-moz-tree-image(tag, treecolAutoCompleteImage),
+.private-autocomplete-treebody::-moz-tree-image(tag, treecolAutoCompleteImage) {
   list-style-image: url("chrome://browser/skin/places/tag.png");
   width: 16px;
   height: 16px;
@@ -1237,7 +1201,8 @@ window[tabsontop="false"] richlistitem[type~="action"][actiontype="switchtab"][s
   -moz-image-region: rect(11px, 32px, 22px, 16px);
 }
 
-.autocomplete-treebody::-moz-tree-cell-text(treecolAutoCompleteComment) {
+.autocomplete-treebody::-moz-tree-cell-text(treecolAutoCompleteComment),
+.private-autocomplete-treebody::-moz-tree-cell-text(treecolAutoCompleteComment) {
   color: GrayText;
 }
 
@@ -1248,13 +1213,15 @@ window[tabsontop="false"] richlistitem[type~="action"][actiontype="switchtab"][s
 }
 
 .autocomplete-treebody::-moz-tree-cell-text(suggesthint, treecolAutoCompleteComment), 
-.autocomplete-treebody::-moz-tree-cell-text(suggestfirst, treecolAutoCompleteComment) 
-{
+.autocomplete-treebody::-moz-tree-cell-text(suggestfirst, treecolAutoCompleteComment),
+.private-autocomplete-treebody::-moz-tree-cell-text(suggesthint, treecolAutoCompleteComment), 
+.private-autocomplete-treebody::-moz-tree-cell-text(suggestfirst, treecolAutoCompleteComment) {
   color: GrayText;
   font-size: smaller;
 }
 
-.autocomplete-treebody::-moz-tree-cell(suggesthint) {
+.autocomplete-treebody::-moz-tree-cell(suggesthint),
+.private-autocomplete-treebody::-moz-tree-cell(suggesthint) {
   border-top: 1px solid GrayText;
 }
 
@@ -2597,6 +2564,12 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
   height: 32px;
 }
 
+.popup-notification-icon[popupid="addon-theme-change"] {
+  list-style-image: url(chrome://mozapps/skin/extensions/themeGeneric.png);
+  width: 32px;
+  height: 32px;
+}
+
 .popup-notification-icon[popupid="click-to-play-plugins"] {
   list-style-image: url(chrome://mozapps/skin/plugins/pluginBlocked-64.png);
 }
@@ -2697,164 +2670,6 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
   box-shadow: inset 0 1px 4px -3px #000, 0 1px rgba(255,255,255,.3);
 }
 
-/* This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
-
-/*** Status and progress indicator ***/
-
-#downloads-indicator-anchor {
-  min-width: 16px;
-  min-height: 16px;
-}
-
-#downloads-animation-container {
-  min-height: 1px;
-  min-width: 1px;
-  height: 1px;
-  margin-bottom: -1px;
-  /* Makes the outermost animation container element positioned, so that its
-     contents are rendered over the main browser window in the Z order.
-     This is required by the animated event notification. */
-  position: relative;
-  /* The selected tab may overlap #downloads-indicator-notification */
-  z-index: 5;
-}
-
-/*** Main indicator icon ***/
-
-#downloads-indicator-icon {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"),
-                              0, 140, 20, 120) center no-repeat;
-}
-
-#downloads-button[attention]
-#downloads-indicator-icon {
-  background-image: url("chrome://browser/skin/downloads/download-glow.png");
-}
-
-/* In the next few rules, we use :not([counter]) as a shortcut that is
-   equivalent to -moz-any([progress], [paused]). */
-
-#downloads-button:not([counter])
-#downloads-indicator-counter {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"),
-                              0, 140, 20, 120) center no-repeat;
-  background-size: 12px;
-}
-
-#downloads-button:not([counter])[attention]
-#downloads-indicator-counter {
-  background-image: url("chrome://browser/skin/downloads/download-glow.png");
-}
-
-/*** Download notifications ***/
-
-#downloads-indicator-notification {
-  opacity: 0;
-  background-size: 16px;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 16px;
-  height: 16px;
-}
-
-@keyframes downloadsIndicatorNotificationStartRight {
-  from { opacity: 0; transform: translate(-128px, 128px) scale(8); }
-  20%  { opacity: .85; animation-timing-function: ease-out; }
-  to   { opacity: 0; transform: translate(0) scale(1); }
-}
-
-@keyframes downloadsIndicatorNotificationStartLeft {
-  from { opacity: 0; transform: translate(128px, 128px) scale(8); }
-  20%  { opacity: .85; animation-timing-function: ease-out; }
-  to   { opacity: 0; transform: translate(0) scale(1); }
-}
-
-#downloads-notification-anchor[notification="start"] > #downloads-indicator-notification {
-  background-image: url("chrome://browser/skin/downloads/download-notification-start.png");
-  animation-name: downloadsIndicatorNotificationStartRight;
-  animation-duration: 1s;
-}
-
-#downloads-notification-anchor[notification="start"]:-moz-locale-dir(rtl) > #downloads-indicator-notification {
-  animation-name: downloadsIndicatorNotificationStartLeft;
-}
-
-@keyframes downloadsIndicatorNotificationFinish {
-  from { opacity: 0; transform: scale(1); }
-  20%  { opacity: .65; animation-timing-function: ease-in; }
-  to   { opacity: 0; transform: scale(8); }
-}
-
-#downloads-notification-anchor[notification="finish"] > #downloads-indicator-notification {
-  background-image: url("chrome://browser/skin/downloads/download-notification-finish.png");
-  animation-name: downloadsIndicatorNotificationFinish;
-  animation-duration: 1s;
-}
-
-/*** Progress bar and text ***/
-
-#downloads-indicator-counter {
-  height: 9px;
-  margin: -3px 0 0;
-  color: hsl(0,0%,30%);
-  text-shadow: 0 1px 0 hsla(0,0%,100%,.5);
-  font-size: 9px;
-  line-height: 9px;
-  text-align: center;
-}
-
-#downloads-indicator-progress {
-  width: 16px;
-  height: 5px;
-  min-width: 0;
-  min-height: 0;
-  margin-top: 1px;
-  margin-bottom: 2px;
-  border-radius: 2px;
-  box-shadow: 0 1px 0 hsla(0,0%,100%,.4);
-}
-
-#downloads-indicator-progress > .progress-bar {
-  -moz-appearance: none;
-  min-width: 0;
-  min-height: 0;
-  /* The background-clip: border-box; and background-image: none; are there to expand the background-color behind the border */
-  background-clip: padding-box, border-box;
-  background-color: rgb(90, 185, 255);
-  background-image: linear-gradient(transparent 1px, rgba(255, 255, 255, 0.4) 1px, rgba(255, 255, 255, 0.4) 2px, transparent 2px), none;
-  border: 1px solid;
-  border-color: rgba(0,43,86,.6) rgba(0,43,86,.4) rgba(0,43,86,.4);
-  border-radius: 2px 0 0 2px;
-}
-
-#downloads-indicator-progress > .progress-remainder {
-  -moz-appearance: none;
-  min-width: 0;
-  min-height: 0;
-  background-image: linear-gradient(#505050, #575757);
-  border: 1px solid;
-  border-color: hsla(0,0%,0%,.6) hsla(0,0%,0%,.4) hsla(0,0%,0%,.4);
-  -moz-border-start: none;
-  border-radius: 0 2px 2px 0;
-}
-
-#downloads-button[paused] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-progress > .progress-bar {
-  background-color: rgb(220, 230, 81);
-}
-
-#downloads-button[paused] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-progress > .progress-remainder {
-  background-image: linear-gradient(#4b5000, #515700);
-}
-
-toolbar[mode="full"] > #downloads-button[indicator] > .toolbarbutton-text {
-  margin: 2px 0 0;
-  padding: 0;
-  text-align: center;
-  vertical-align: middle;
-}
-
 .messageImage[value="plugin-hidden"] {
   list-style-image: url("chrome://browser/skin/notification-pluginNormal.png");
   -moz-image-region: rect(0, 16px, 16px, 0);
@@ -2871,481 +2686,45 @@ notification.pluginVulnerable .messageImage {
   list-style-image: url("chrome://browser/skin/notification-pluginBlocked.png");
 }
 
-/* UI Tour */
+/* Badge toolbar item */
 
-@keyframes uitour-wobble {
-  from {
-    transform: rotate(0deg) translateX(2px) rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg) translateX(2px) rotate(-360deg);
-  }
-}
-
-@keyframes uitour-zoom {
-  from {
-    transform: scale(0.9);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  to {
-    transform: scale(0.9);
-  }
-}
-
-@keyframes uitour-color {
-  from {
-    border-color: #5B9CD9;
-  }
-  50% {
-    border-color: #FF0000;
-  }
-  to {
-    border-color: #5B9CD9;
-  }
-}
-
-html|div#UITourHighlight {
-  display: none;
-  position: absolute;
-  min-height: 32px;
-  min-width: 32px;
-  display: none;
-  border: 2px #5B9CD9 solid;
-  box-shadow: 0 0 2px #5B9CD9, inset 0 0 1px #5B9CD9;
-  border-radius: 20px;
-  z-index: 10000000000;
-}
-
-html|div#UITourHighlight[active] {
-  display: block;
-  animation-delay: 2s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
-}
-
-html|div#UITourHighlight[active="wobble"] {
-  animation-name: uitour-wobble;
-  animation-duration: 1s;
-}
-html|div#UITourHighlight[active="zoom"] {
-  animation-name: uitour-zoom;
-  animation-duration: 1s;
-}
-html|div#UITourHighlight[active="color"] {
-  animation-name: uitour-color;
-  animation-duration: 2s;
-}
-
-#UITourTooltip {
-  max-width: 20em;
-}
-
-#UITourTooltipTitle {
-  font-weight: bold;
-  font-size: 130%;
-  margin: 0 0 5px 0;
-}
-
-#UITourTooltipDescription {
-  max-width: 20em;
-}
-
-/* === social toolbar button === */
-
-#social-toolbar-item > .toolbarbutton-1 {
-  margin-left: 0;
-  margin-right: 0;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-#social-toolbar-item > .toolbarbutton-1:-moz-locale-dir(ltr) {
-  -moz-border-end-width: 0;
-}
-#social-toolbar-item > .toolbarbutton-1:last-child:-moz-locale-dir(ltr) {
-  -moz-border-end-width: 1px;
-}
-#social-toolbar-item > .toolbarbutton-1:-moz-locale-dir(rtl) {
-  -moz-border-start-width: 0;
-}
-#social-toolbar-item > .toolbarbutton-1:first-child:-moz-locale-dir(rtl) {
-  -moz-border-start-width: 1px;
-}
-
-#social-toolbar-item > .toolbarbutton-1:-moz-locale-dir(ltr):first-child,
-#social-toolbar-item > .toolbarbutton-1:-moz-locale-dir(rtl):last-child {
-  margin-left: 4px;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-}
-#social-toolbar-item > .toolbarbutton-1:-moz-locale-dir(rtl):first-child,
-#social-toolbar-item > .toolbarbutton-1:-moz-locale-dir(ltr):last-child {
-  margin-right: 4px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-
-#social-toolbar-item > toolbaritem {
-  margin: 0;
-}
-
-#social-provider-button {
-  list-style-image: url(chrome://browser/skin/social/services-16.png);
-}
-
-#social-provider-button > .toolbarbutton-menu-dropmarker {
-  display: none;
-}
-
-.toolbarbutton-badge-container {
+.toolbarbutton-badge-container,
+.toolbarbutton-badge-stack {
   margin: 0;
   padding: 0;
   position: relative;
 }
 
-.toolbarbutton-badge[badge]:not([badge=""]):-moz-window-inactive {
-  background-color: rgb(230,230,230);
-  box-shadow: none;
-  border: 1px solid rgb(206,206,206);
-  color: rgb(192,192,192);
+#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-badge-container,
+#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-badge-stack {
+  padding: 2px 5px;
 }
 
-.toolbarbutton-badge[badge]:not([badge=""]):-moz-locale-dir(rtl) {
+.toolbarbutton-1 > .toolbarbutton-badge-container > .toolbar-icon,
+.toolbarbutton-1 > .toolbarbutton-badge-stack > .toolbar-icon {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
+
+.toolbarbutton-badge-container > .toolbarbutton-icon[label]:not([label=""]),
+.toolbarbutton-badge-stack > .toolbarbutton-icon[label]:not([label=""]) {
+  -moz-margin-end: 0;
+}
+
+#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar *|* > .toolbarbutton-badge[badge]:not([badge=""])::after {
+  top: 1px;
+  right: 1px;
+}
+
+.toolbarbutton-badge[badge]:not([badge=""]):-moz-locale-dir(rtl)::after {
   left: 0;
   right: auto;
 }
 
-toolbar[mode="icons"] > *|* > .toolbarbutton-badge[badge]:not([badge=""]) {
-  right: -2px;
-}
-
-toolbar[mode="icons"] > *|* > .toolbarbutton-badge[badge]:not([badge=""]):-moz-locale-dir(rtl) {
-  left: -2px;
-}
-
-.popup-notification-icon[popupid="servicesInstall"] {
-  list-style-image: url(chrome://browser/skin/social/services-64.png);
-}
-#servicesInstall-notification-icon {
-  list-style-image: url(chrome://browser/skin/social/services-16.png);
-}
-
-#social-undoactivation-button,
-#servicesInstall-learnmore-link {
-  -moz-margin-start: 0; /* override default label margin to match description margin */
-}
-
-.social-activation-icon {
-  width: auto;
-  height: auto;
-  max-height: 64px;
-  max-width: 64px;
-}
-
-#social-activation-message {
-  max-width: 250px;
-}
-
-#social-activation-message > label {
-  margin: 0;
-}
-
-#social-activation-button {
-  -moz-appearance: none; color: #434343; border-radius: 4px; border: 1px solid #b5b5b5; background: linear-gradient(#fff, #f2f2f2); box-shadow: inset 0 1px rgba(255,255,255,.8), inset 0 0 1px rgba(255,255, 255,.25), 0 1px rgba(255,255,255,.3); background-clip: padding-box; background-origin: padding-box; padding: 2px 6px;
-  min-height: 0px;
-}
-
-#social-activation-button:focus {
-  box-shadow: 0 0 1px #6483f8 inset, 0 0 4px 1px #6483f8, 0 0 2px 1px #6483f8;
-}
-
-#social-activation-button:hover:active {
-  box-shadow: inset 0 1px 4px -3px #000, 0 1px rgba(255,255,255,.3);
-}
-
-/* === end of social toolbar button === */
-
-/* === social toolbar provider menu  === */
-
-.social-statusarea-user {
-  list-style-image:url("chrome://global/skin/icons/information-32.png");
-}
-
-.social-statusarea-user-portrait {
-  width: 32px;
-  height: 32px;
-  margin: 4px;
-  -moz-margin-start: 0;
-}
-
-.social-panel > .panel-arrowcontainer > .panel-arrowcontent {
-  padding: 0;
-}
-
-/* fixup rounded corners for osx panels */
-.social-panel > .social-panel-frame {
-  border-radius: inherit;
-}
-
-#social-share-panel {
-  margin-top: 3px;
-  max-height: 600px;
-  min-height: 100px;
-  max-width: 800px;
-  min-width: 300px;
-}
-
-.social-share-frame:-moz-locale-dir(ltr) {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-right-radius: inherit;
-  border-bottom-right-radius: inherit;
-}
-
-.social-share-frame:-moz-locale-dir(rtl) {
-  border-top-left-radius: inherit;
-  border-bottom-left-radius: inherit;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-#social-share-panel > .social-share-toolbar:-moz-locale-dir(ltr) {
-  border-top-left-radius: inherit;
-  border-bottom-left-radius: inherit;
-}
-
-#social-share-panel > .social-share-toolbar:-moz-locale-dir(rtl) {
-  border-top-right-radius: inherit;
-  border-bottom-right-radius: inherit;
-}
-
-#social-share-provider-buttons:-moz-locale-dir(ltr) {
-  border-top-left-radius: inherit;
-  border-bottom-left-radius: inherit;
-}
-
-#social-share-provider-buttons:-moz-locale-dir(rtl) {
-  border-top-right-radius: inherit;
-  border-bottom-right-radius: inherit;
-}
-
-/* === end of social toolbar provider menu === */
-
-
-.chat-status-icon {
-  max-height: 16px;
-  max-width: 16px;
-  padding: 0;
-}
-
-.chat-toolbarbutton {
-  -moz-appearance: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  background: none;
-  width: 16px;
-}
-
-.chat-toolbarbutton > .toolbarbutton-text {
-  display: none;
-}
-
-.chat-toolbarbutton > .toolbarbutton-icon {
-  width: inherit;
-}
-
-.chat-close-button {
-  list-style-image: url('chrome://browser/skin/social/chat-icons.png');
-  -moz-image-region: rect(0, 16px, 16px, 0);
-}
-
-.chat-close-button:hover {
-  -moz-image-region: rect(0, 32px, 16px, 16px);
-}
-
-.chat-close-button:hover:active {
-  -moz-image-region: rect(0, 48px, 16px, 32px);
-}
-
-.chat-minimize-button {
-  list-style-image: url('chrome://browser/skin/social/chat-icons.png');
-  -moz-image-region: rect(16px, 16px, 32px, 0);
-}
-
-.chat-minimize-button:hover {
-  -moz-image-region: rect(16px, 32px, 32px, 16px);
-}
-
-.chat-minimize-button:hover:active {
-  -moz-image-region: rect(16px, 48px, 32px, 32px);
-}
-
-.chat-swap-button {
-  list-style-image: url('chrome://browser/skin/social/chat-icons.png');
-  -moz-image-region: rect(48px, 16px, 64px, 0);
-}
-
-.chat-swap-button:hover {
-  -moz-image-region: rect(48px, 32px, 64px, 16px);
-}
-
-.chat-swap-button:hover:active {
-  -moz-image-region: rect(48px, 48px, 64px, 32px);
-}
-
-chatbar > chatbox > .chat-titlebar > .chat-swap-button {
-  list-style-image: url('chrome://browser/skin/social/chat-icons.png');
-  -moz-image-region: rect(32px, 16px, 48px, 0);
-}
-
-chatbar > chatbox > .chat-titlebar > .chat-swap-button:hover {
-  -moz-image-region: rect(32px, 32px, 48px, 16px);
-}
-
-chatbar > chatbox > .chat-titlebar > .chat-swap-button:hover:active {
-  -moz-image-region: rect(32px, 48px, 48px, 32px);
-}
-
-.chat-title {
-  font-weight: bold;
-  color: black;
-  text-shadow: none;
-  cursor: inherit;
-}
-
-.chat-titlebar {
-  height: 20px;
-  min-height: 20px;
-  width: 100%;
-  margin: 0;
-  padding: 2px;
-  -moz-padding-start: 6px;
-  border: none;
-  border-bottom: 1px solid #ccc;
-  cursor: pointer;
-}
-
-.chat-titlebar > .notification-anchor-icon {
-  margin-left: 2px;
-  margin-right: 2px;
-}
-
-.chat-titlebar[minimized="true"] {
-  border-bottom: none;
-}
-
-.chat-titlebar[activity] {
-  background-image: radial-gradient(ellipse closest-side at center, rgb(255,255,255), rgba(255,255,255,0));
-  background-repeat: no-repeat;
-  background-size: 100% 20px;
-  background-position: 0 -10px;
-}
-
-.chat-frame {
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-}
-
-.chatbar-button {
-  list-style-image: url("chrome://browser/skin/social/services-16.png");
-  margin: 0;
-  padding: 2px;
-  height: 21px;
-  width: 21px;
-  border: 1px solid #ccc;
-  border-bottom: none;
-}
-
-.chatbar-button > .toolbarbutton-icon {
-  width: 16px;
-}
-
-.chatbar-button > menupopup > .menuitem-iconic > .menu-iconic-left > .menu-iconic-icon {
-  width: auto;
-  height: auto;
-  max-height: 16px;
-  max-width: 16px;
-}
-
-.chatbar-button[open="true"] {
-  box-shadow: inset 0 2px 5px rgba(0,0,0,0.6), 0 1px rgba(255,255,255,0.2);
-}
-
-.chatbar-button > .toolbarbutton-text,
-.chatbar-button > .toolbarbutton-menu-dropmarker {
-  display: none;
-}
-
-.chatbar-button > menupopup > menuitem[activity] {
-  font-weight: bold;
-}
-
-.chatbar-innerbox {
-  background: transparent;
-  margin: -285px 0 0;
-  overflow: hidden;
-}
-
-chatbar {
-  -moz-margin-end: 20px;
-}
-
-chatbox {
-  -moz-margin-start: 4px;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-bottom: none;
-}
-
-window > chatbox {
-  -moz-margin-start: 0px;
-  margin: 0px;
-  border: none;
-  padding: 0px;
-}
-
-.chat-titlebar {
-  background-color: #d9d9d9;
-  background-image: linear-gradient(rgba(255,255,255,.43), rgba(255,255,255,0));
-}
-
-.chat-titlebar[selected] {
-  background-color: #f0f0f0;
-}
-
-.chatbar-button {
-  background-color: #d9d9d9;
-  background-image: linear-gradient(rgba(255,255,255,.43), rgba(255,255,255,0));
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-}
-
-.chatbar-button:hover,
-.chatbar-button[open="true"] {
-  background-color: #f0f0f0;
-}
-
-.chatbar-button[activity]:not([open]) {
-  background-image: radial-gradient(circle farthest-corner at center 2px, rgb(254,254,255) 3%, rgba(210,235,255,0.9) 12%, rgba(148,205,253,0.6) 30%, rgba(148,205,253,0.2) 70%);
-}
-
-chatbox {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-}
-
-window > chatbox {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
+#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar *|* > .toolbarbutton-badge[badge]:not([badge=""]):-moz-locale-dir(rtl)::after {
+  left: 1px;
+  right: auto;
 }
 
 panel[type="arrow"][popupid="click-to-play-plugins"] > .panel-arrowcontainer > .panel-arrowbox > .panel-arrow[side="top"],
@@ -3540,31 +2919,6 @@ panel[type="arrow"][popupid="click-to-play-plugins"] > .panel-arrowcontainer > .
 
 .allTabs-preview:focus > * > .allTabs-preview-inner {
   box-shadow: 0 0 1px #6483f8 inset, 0 0 4px 1px #6483f8, 0 0 1.5px 1px #6483f8;
-}
-
-/* Inspector / Highlighter */
-
-#highlighter-panel {
-  -moz-appearance: none;
-  -moz-window-shadow: none;
-  background: -moz-linear-gradient(top -1deg, #ffdd88, #ffeeaa);
-  border: none;
-  opacity: 0.35;
-}
-
-listitem.style-selector {
-  background-color: DarkGray;
-  color: white;
-}
-
-listitem.style-section {
-  background-color: LightGray;
-  color: black;
-  font-weight: bold;
-}
-
-panel[dimmed="true"] {
-  opacity: 0.5;
 }
 
 /* Vertically-center the statusbar compatibility shim, because
@@ -4280,414 +3634,6 @@ html|*#gcli-output-frame {
   border-radius: 1px;
   -moz-margin-end: 5px;
 }
-
-/* Social toolbar item */
-
-#social-provider-button {
-  -moz-image-region: rect(0, 16px, 16px, 0);
-  list-style-image: url(chrome://browser/skin/social/services-16.png);
-}
-
-#social-provider-button > .toolbarbutton-menu-dropmarker {
-  display: none;
-}
-
-.toolbarbutton-badge-container {
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-badge-container {
-  padding: 2px 5px;
-}
-
-.toolbarbutton-1 > .toolbarbutton-badge-container > .toolbar-icon {
-  position: absolute;
-  top: 2px;
-  right: 2px;
-}
-
-.toolbarbutton-badge-container > .toolbarbutton-icon[label]:not([label=""]) {
-  -moz-margin-end: 0;
-}
-
-.toolbarbutton-badge[badge=""] {
-  display: none;
-}
-.toolbarbutton-badge[badge]:not([badge=""])::after {
-  /* The |content| property is set in the content stylesheet. */
-  font-size: 9px;
-  font-weight: bold;
-  padding: 0 1px;
-  color: #fff;
-  background-color: rgb(240,61,37);
-  border: 1px solid rgb(216,55,34);
-  border-radius: 2px;
-  box-shadow: 0 1px 0 rgba(0,39,121,0.77);
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar *|* > .toolbarbutton-badge[badge]:not([badge=""])::after {
-  top: 1px;
-  right: 1px;
-}
-
-.toolbarbutton-badge[badge]:not([badge=""]):-moz-locale-dir(rtl)::after {
-  left: 0;
-  right: auto;
-}
-
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar *|* > .toolbarbutton-badge[badge]:not([badge=""]):-moz-locale-dir(rtl)::after {
-  left: 1px;
-  right: auto;
-}
-
-.popup-notification-icon[popupid="servicesInstall"] {
-  list-style-image: url(chrome://browser/skin/social/services-64.png);
-}
-#servicesInstall-notification-icon {
-  list-style-image: url(chrome://browser/skin/social/services-16.png);
-}
-#social-undoactivation-button,
-#servicesInstall-learnmore-link {
-  -moz-margin-start: 0; /* override default label margin to match description margin */
-}
-
-#socialActivatedNotification .popup-notification-button-container {
-  margin-left: 6px;
-}
-
-.social-activation-icon {
-  width: auto;
-  height: auto;
-  max-height: 64px;
-  max-width: 64px;
-}
-
-#social-activation-message {
-  max-width: 250px;
-}
-
-#social-activation-message > label {
-  margin: 0;
-}
-
-/* social toolbar provider menu */
-.social-statusarea-popup {
-  margin-top: 0;
-  margin-left: -12px;
-  margin-right: -12px;
-}
-
-.social-statusarea-user {
-  -moz-appearance: none;
-  border-bottom: 1px solid rgb(221,221,221);
-  background-color: -moz-Dialog;
-  position: relative;
-  cursor: pointer;
-  list-style-image:url("chrome://global/skin/icons/information-32.png");
-}
-
-.social-statusarea-user-portrait {
-  width: 32px;
-  height: 32px;
-  border-radius: 2px;
-  margin: 10px;
-}
-
-.social-statusarea-loggedInStatus {
-  -moz-appearance: none;
-  background: transparent;
-  border: none;
-  color: -moz-nativehyperlinktext;
-  min-width: 0;
-  margin: 0 6px;
-  list-style-image: none;
-}
-
-.social-statusarea-user[_moz-menuactive] > vbox > .social-statusarea-loggedInStatus {
-  text-decoration: underline;
-}
-
-.social-panel > .panel-arrowcontainer > .panel-arrowcontent {
-  padding: 0;
-}
-
-.social-panel-frame {
-  border-radius: inherit;
-}
-
-
-.chat-status-icon {
-  max-height: 16px;
-  max-width: 16px;
-  padding: 0;
-}
-
-.chat-toolbarbutton {
-  -moz-appearance: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  background: none;
-  width: 16px;
-}
-
-.chat-toolbarbutton > .toolbarbutton-text {
-  display: none;
-}
-
-.chat-toolbarbutton > .toolbarbutton-icon {
-  width: inherit;
-}
-
-.chat-close-button {
-  list-style-image: url('chrome://browser/skin/social/chat-icons.png');
-  -moz-image-region: rect(0, 16px, 16px, 0);
-}
-
-.chat-close-button:hover {
-  -moz-image-region: rect(0, 32px, 16px, 16px);
-}
-
-.chat-close-button:hover:active {
-  -moz-image-region: rect(0, 48px, 16px, 32px);
-}
-
-.chat-minimize-button {
-  list-style-image: url('chrome://browser/skin/social/chat-icons.png');
-  -moz-image-region: rect(16px, 16px, 32px, 0);
-}
-
-.chat-minimize-button:hover {
-  -moz-image-region: rect(16px, 32px, 32px, 16px);
-}
-
-.chat-minimize-button:hover:active {
-  -moz-image-region: rect(16px, 48px, 32px, 32px);
-}
-
-.chat-swap-button {
-  list-style-image: url('chrome://browser/skin/social/chat-icons.png');
-  -moz-image-region: rect(48px, 16px, 64px, 0);
-}
-
-.chat-swap-button:hover {
-  -moz-image-region: rect(48px, 32px, 64px, 16px);
-}
-
-.chat-swap-button:hover:active {
-  -moz-image-region: rect(48px, 48px, 64px, 32px);
-}
-
-chatbar > chatbox > .chat-titlebar > .chat-swap-button {
-  list-style-image: url('chrome://browser/skin/social/chat-icons.png');
-  -moz-image-region: rect(32px, 16px, 48px, 0);
-}
-
-chatbar > chatbox > .chat-titlebar > .chat-swap-button:hover {
-  -moz-image-region: rect(32px, 32px, 48px, 16px);
-}
-
-chatbar > chatbox > .chat-titlebar > .chat-swap-button:hover:active {
-  -moz-image-region: rect(32px, 48px, 48px, 32px);
-}
-
-@media (min-resolution: 2dppx) {
-  .chat-close-button {
-    list-style-image: url('chrome://browser/skin/social/chat-icons@2x.png');
-    -moz-image-region: rect(0, 32px, 32px, 0);
-  }
-
-  .chat-close-button:hover {
-    -moz-image-region: rect(0, 64px, 32px, 32px);
-  }
-
-  .chat-close-button:hover:active {
-    -moz-image-region: rect(0, 96px, 32px, 64px);
-  }
-
-  .chat-minimize-button {
-    list-style-image: url('chrome://browser/skin/social/chat-icons@2x.png');
-    -moz-image-region: rect(32px, 32px, 64px, 0);
-  }
-
-  .chat-minimize-button:hover {
-    -moz-image-region: rect(32px, 64px, 64px, 32px);
-  }
-
-  .chat-minimize-button:hover:active {
-    -moz-image-region: rect(32px, 96px, 64px, 64px);
-  }
-
-  .chat-swap-button {
-    list-style-image: url('chrome://browser/skin/social/chat-icons@2x.png');
-    -moz-image-region: rect(96px, 32px, 128px, 0);
-  }
-
-  .chat-swap-button:hover {
-    -moz-image-region: rect(96px, 64px, 128px, 32px);
-  }
-
-  .chat-swap-button:hover:active {
-    -moz-image-region: rect(96px, 96px, 128px, 64px);
-  }
-
-  chatbar > chatbox > .chat-titlebar > .chat-swap-button {
-    list-style-image: url('chrome://browser/skin/social/chat-icons@2x.png');
-    -moz-image-region: rect(64px, 32px, 96px, 0);
-  }
-
-  chatbar > chatbox > .chat-titlebar > .chat-swap-button:hover {
-    -moz-image-region: rect(64px, 64px, 96px, 32px);
-  }
-
-  chatbar > chatbox > .chat-titlebar > .chat-swap-button:hover:active {
-    -moz-image-region: rect(64px, 96px, 96px, 64px);
-  }
-}
-
-.chat-title {
-  font-weight: bold;
-  color: black;
-  text-shadow: none;
-  cursor: inherit;
-}
-
-.chat-titlebar {
-  height: 20px;
-  min-height: 20px;
-  width: 100%;
-  margin: 0;
-  padding: 2px;
-  -moz-padding-start: 6px;
-  border: none;
-  border-bottom: 1px solid #ccc;
-  cursor: pointer;
-}
-
-.chat-titlebar > .notification-anchor-icon {
-  margin-left: 2px;
-  margin-right: 2px;
-}
-
-.chat-titlebar[minimized="true"] {
-  border-bottom: none;
-}
-
-.chat-titlebar[activity] {
-  background-image: radial-gradient(ellipse closest-side at center, rgb(255,255,255), rgba(255,255,255,0));
-  background-repeat: no-repeat;
-  background-size: 100% 20px;
-  background-position: 0 -10px;
-}
-
-.chat-frame {
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-}
-
-.chatbar-button {
-  list-style-image: url("chrome://browser/skin/social/services-16.png");
-  margin: 0;
-  padding: 2px;
-  height: 21px;
-  width: 21px;
-  border: 1px solid #ccc;
-  border-bottom: none;
-}
-
-@media (min-resolution: 2dppx) {
-  .chatbar-button {
-    list-style-image: url("chrome://browser/skin/social/services-16@2x.png");
-  }
-}
-
-.chatbar-button > .toolbarbutton-icon {
-  width: 16px;
-}
-
-.chatbar-button > menupopup > .menuitem-iconic > .menu-iconic-left > .menu-iconic-icon {
-  width: auto;
-  height: auto;
-  max-height: 16px;
-  max-width: 16px;
-}
-
-.chatbar-button[open="true"] {
-  box-shadow: inset 0 2px 5px rgba(0,0,0,0.6), 0 1px rgba(255,255,255,0.2);
-}
-
-.chatbar-button > .toolbarbutton-text,
-.chatbar-button > .toolbarbutton-menu-dropmarker {
-  display: none;
-}
-
-.chatbar-button > menupopup > menuitem[activity] {
-  font-weight: bold;
-}
-
-.chatbar-innerbox {
-  background: transparent;
-  margin: -285px 0 0;
-  overflow: hidden;
-}
-
-chatbar {
-  -moz-margin-end: 20px;
-}
-
-chatbox {
-  -moz-margin-start: 4px;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-bottom: none;
-}
-
-window > chatbox {
-  -moz-margin-start: 0px;
-  margin: 0px;
-  border: none;
-  padding: 0px;
-}
-
-.chat-titlebar {
-  background-color: #c4cfde;
-  background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
-}
-
-.chat-titlebar[selected] {
-  background-color: #dae3f0;
-}
-
-.chatbar-button {
-  -moz-appearance: none;
-  background-color: #c4cfde;
-  background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
-}
-
-.chatbar-button > .toolbarbutton-icon {
-  -moz-margin-end: 0;
-}
-
-.chatbar-button:hover,
-.chatbar-button[open="true"] {
-  background-color: #dae3f0;
-}
-
-.chatbar-button[activity]:not([open="true"]) {
-  background-image: radial-gradient(circle farthest-corner at center 3px, rgb(255,255,255) 3%, rgba(186,221,251,0.75) 40%, rgba(127,179,255,0.5) 80%, rgba(127,179,255,0.25));
-}
-
-chatbox {
-  border-top-left-radius: 2.5px;
-  border-top-right-radius: 2.5px;
-}
-
 
 @media (-moz-windows-compositor) {
   #main-window {

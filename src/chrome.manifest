@@ -4,3 +4,8 @@ skin mozapps      xmoon chrome/mozapps/
 skin global       xmoon chrome/global/
 skin os           xmoon chrome/os/darwin/ os=Darwin
 skin os           xmoon chrome/os/general/ os!=Darwin
+skin appver       xmoon chrome/appver/27/ appversion<28.0.0a1
+skin appver       xmoon chrome/appver/28/ appversion>=28.0.0a1
+
+override chrome://browser/skin/autocomplete.css chrome://global/skin/autocomplete.css
+override chrome://browser/skin/permissions/aboutPermissions.css chrome://browser/skin/preferences/aboutPermissions.css
