@@ -1607,7 +1607,7 @@ window[tabsontop="false"] richlistitem[type~="action"][actiontype="switchtab"][s
   background: url("chrome://browser/skin/subtle-pattern.png") #B3B9C1;
 }
 
-/* ----- SIDEBAR ELEMENTS ----- */
+/* ----- content area ----- */
 
 #sidebar,
 sidebarheader {
@@ -1648,6 +1648,13 @@ sidebarheader {
 
 sidebarheader > .tabs-closebutton > .toolbarbutton-text {
   display: none;
+}
+
+.browserContainer > findbar {
+  background: -moz-linear-gradient(top, #E8E8E8, #D0D0D0) repeat-x;
+  border-top: 1px solid #888;
+  color: #000;
+  text-shadow: none;
 }
 
 /* ----- SIDEBAR ELEMENTS ----- */
