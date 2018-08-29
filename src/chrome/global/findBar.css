@@ -57,7 +57,7 @@ label.findbar-find-fast:-moz-lwtheme,
 
 .findbar-highlight,
 .findbar-case-sensitive {
-  -moz-margin-end: 5px;
+  margin-inline-end: 5px;
   padding: 0 3px;
 }
 
@@ -98,7 +98,7 @@ label.findbar-find-fast:-moz-lwtheme,
 
 .findbar-find-previous,
 .findbar-find-next {
-  -moz-margin-start: 0;
+  margin-inline-start: 0;
   list-style-image: url(chrome://global/skin/icons/find-arrows.png);
   padding: 2px 6px;
 }
@@ -116,14 +116,14 @@ label.findbar-find-fast:-moz-lwtheme,
 }
 
 .findbar-find-previous {
-  -moz-margin-end: 0;
+  margin-inline-end: 0;
   -moz-image-region: rect(0, 10px, 9px, 0);
   border-radius: 0;
 }
 
 .findbar-find-next {
   -moz-image-region: rect(0, 20px, 9px, 10px);
-  -moz-padding-end: 7px;
+  padding-inline-end: 7px;
 }
 
 .findbar-textbox.findbar-find-fast + .findbar-find-next,
@@ -155,7 +155,7 @@ label.findbar-find-fast:-moz-lwtheme,
   -moz-image-region: rect(0px 16px 16px 0px);
   -moz-appearance: none;
   margin: 0 2px;
-  -moz-margin-start: 7px;
+  margin-inline-start: 7px;
 }
 
 .findbar-container > checkbox:hover:active {
@@ -180,7 +180,7 @@ label.findbar-find-fast:-moz-lwtheme,
 }
 
 .findbar-container > checkbox > .checkbox-label-box > .checkbox-icon {
-  -moz-padding-start: 1px;
+  padding-inline-start: 1px;
   padding-bottom: 1px;
 }
 
@@ -200,7 +200,7 @@ label.findbar-find-fast:-moz-lwtheme,
   background: url("chrome://global/skin/icons/search-textbox.png") #FFFFFF no-repeat 5px center;
   margin: 0 4px -1px;
   padding: 3px 8px 2px;
-  -moz-padding-start: 19px;
+  padding-inline-start: 19px;
 }
 
 .findbar-textbox:not([focused="true"]):-moz-lwtheme {
@@ -224,8 +224,8 @@ label.findbar-find-fast:-moz-lwtheme,
 /* find-next button */
 
 .findbar-find-next {
-  -moz-border-end: none;
-  -moz-margin-end: 0 !important;
+  border-inline-end: none;
+  margin-inline-end: 0 !important;
 }
 
 .findbar-find-next:-moz-locale-dir(ltr),
@@ -237,7 +237,7 @@ label.findbar-find-fast:-moz-lwtheme,
 /* find-previous button */
 
 .findbar-find-previous {
-  -moz-margin-start: 0 !important;
+  margin-inline-start: 0 !important;
 }
 
 .findbar-find-previous:-moz-locale-dir(ltr),
@@ -250,7 +250,7 @@ label.findbar-find-fast:-moz-lwtheme,
 
 .findbar-highlight,
 .findbar-case-sensitive {
-  -moz-margin-start: 8px;
+  margin-inline-start: 8px;
 }
 
 .findbar-highlight > .toolbarbutton-icon,
@@ -258,7 +258,7 @@ label.findbar-find-fast:-moz-lwtheme,
   width: 13px;
   height: 8px;
   margin: 0 4px;
-  -moz-margin-end: 0;
+  margin-inline-end: 0;
   border: 1px solid #818181;
   border-radius: 4px;
   background-color: #F4F4F3;
@@ -280,5 +280,5 @@ label.findbar-find-fast:-moz-lwtheme,
   font-weight: bold;
   text-shadow: 0 1px rgba(255, 255, 255, .4);
   margin: 1px 1px 0 !important;
-  -moz-margin-start: 12px !important;
+  margin-inline-start: 12px !important;
 }

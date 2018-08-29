@@ -52,13 +52,13 @@ tabbox > tabs > tab[disabled="true"][selected="true"] {
 }
 
 tabbox > tabs > tab:first-of-type {
-  -moz-padding-start: 2px;
+  padding-inline-start: 2px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
 tabbox > tabs > tab:last-of-type {
-  -moz-padding-end: 2px;
+  padding-inline-end: 2px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   border-right: 1px solid #808080;
@@ -103,7 +103,7 @@ tabs.tabs-bottom > tab {
   margin: -1px 0 0;
   padding: 0 0 2px 0;
   position: relative;
-  -moz-border-end: 1px solid rgba(0, 0, 0, 0.19);
+  border-inline-end: 1px solid rgba(0, 0, 0, 0.19);
 }
 
 tabbox.tabs-bottom > tabs > tab > .tab-middle,
@@ -114,7 +114,7 @@ tabs.tabs-bottom > tab > .tab-middle {
 tabbox.tabs-bottom > tabs > tab:not([selected=true]):hover,
 tabs.tabs-bottom > tab:not([selected=true]):hover {
   background-color: rgba(0, 0, 0, 0.1);
-  -moz-border-end-color: rgba(0, 0, 0, 0.1);
+  border-inline-end-color: rgba(0, 0, 0, 0.1);
 }
 
 tabbox.tabs-bottom > tabs > tab[selected=true],
@@ -125,7 +125,7 @@ tabs.tabs-bottom > tab[selected=true] {
   -moz-border-left-colors: rgba(0, 0, 0, 0.08) #888;
   -moz-border-right-colors: rgba(0, 0, 0, 0.08) #888;
   -moz-border-bottom-colors: rgba(0, 0, 0, 0.08) #888;
-  -moz-margin-end: -1px;
+  margin-inline-end: -1px;
   margin-top: -2px;
   margin-bottom: 1px;
   padding: 0;
@@ -133,18 +133,18 @@ tabs.tabs-bottom > tab[selected=true] {
 
 tabbox.tabs-bottom > tabs > tab[beforeselected=true],
 tabs.tabs-bottom > tab[beforeselected=true] {
-  -moz-border-end-color: transparent;
-  -moz-margin-end: -2px;
+  border-inline-end-color: transparent;
+  margin-inline-end: -2px;
 }
 
 tabbox.tabs-bottom > tabs > tab:first-of-type:not([selected=true]),
 tabs.tabs-bottom > tab:first-of-type:not([selected=true]) {
-  -moz-border-start: 4px solid transparent;
+  border-inline-start: 4px solid transparent;
 }
 
 tabbox.tabs-bottom > tabs > tab:first-of-type[selected=true],
 tabs.tabs-bottom > tab:first-of-type[selected=true] {
-  -moz-margin-start: 2px;
+  margin-inline-start: 2px;
 }
 
 tabbox.tabs-bottom,

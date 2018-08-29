@@ -135,18 +135,18 @@ notification[type="critical"] .messageImage {
   margin: 0;
   padding-top: 2px;
   padding-bottom: 2px;
-  -moz-padding-start: 8px;
-  -moz-padding-end: 5px;
-  -moz-border-end: 1px solid rgba(0,0,0,.65);
+  padding-inline-start: 8px;
+  padding-inline-end: 5px;
+  border-inline-end: 1px solid rgba(0,0,0,.65);
 }
 
 .popup-notification-menubutton > .button-menubutton-dropmarker {
   width: 20px;
   padding-top: 7px;
   padding-bottom: 7px;
-  -moz-padding-start: 5px;
-  -moz-padding-end: 8px;
-  -moz-margin-start: -1px;
+  padding-inline-start: 5px;
+  padding-inline-end: 8px;
+  margin-inline-start: -1px;
   list-style-image: url("chrome://global/skin/icons/panel-dropmarker.png");
 }
 

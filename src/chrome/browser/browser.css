@@ -212,7 +212,7 @@
 }
 
 #appmenuPrimaryPane {
-  -moz-border-end: 1px solid ThreeDShadow;
+  border-inline-end: 1px solid ThreeDShadow;
 }
 
 #appmenu-popup {
@@ -223,12 +223,12 @@
 #appmenuPrimaryPane {
   background-color: rgba(255,255,255,0.5);
   padding: 2px;
-  -moz-border-end: none;
+  border-inline-end: none;
 }
 #appmenuSecondaryPane {
   background-color: #DDE4EA;
-  -moz-padding-start: 3px;
-  -moz-padding-end: 2px;
+  padding-inline-start: 3px;
+  padding-inline-end: 2px;
   padding-top: 2px;
   padding-bottom: 2px;
 }
@@ -240,7 +240,7 @@
   -moz-appearance: none;
   margin-top: 3px;
   margin-bottom: 3px;
-  -moz-margin-start: 30px;
+  margin-inline-start: 30px;
   padding: 0;
   border-top: 1px solid #d6e5f5;
   border-bottom: none;
@@ -358,8 +358,8 @@ toolbarbutton.bookmark-item {
   list-style-image: url("chrome://browser/skin/places/folderDropArrow.png");
   -moz-image-region: rect(0, 7px, 5px, 0);
   margin-top: 1px;
-  -moz-margin-start: 3px;
-  -moz-margin-end: -2px;
+  margin-inline-start: 3px;
+  margin-inline-end: -2px;
 }
 
 .bookmark-item > .toolbarbutton-text {
@@ -391,7 +391,7 @@ toolbarbutton.bookmark-item[open="true"] {
 
 toolbarbutton.bookmark-item > menupopup {
   margin-top: 2px;
-  -moz-margin-start: 3px;
+  margin-inline-start: 3px;
 }
 
 .bookmark-item > .toolbarbutton-icon {
@@ -402,7 +402,7 @@ toolbarbutton.bookmark-item > menupopup {
 
 .bookmark-item > .toolbarbutton-icon[label]:not([label=""]),
 .bookmark-item > .toolbarbutton-icon[type="menu"] {
-  -moz-margin-end: 5px;
+  margin-inline-end: 5px;
 }
 
 .bookmark-item[container] {
@@ -548,13 +548,13 @@ toolbar:not([mode="icons"]) #restore-button {
 }
 
 .toolbarbutton-1 > .toolbarbutton-menu-dropmarker {
-  -moz-margin-end: 1px;
+  margin-inline-end: 1px;
 }
 
 .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
   width: 14px;
   padding-top: 2px;
-  -moz-border-start: none !important;
+  border-inline-start: none !important;
 }
 
 toolbar:not([mode="icons"]) .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
@@ -643,7 +643,7 @@ toolbar[mode="icons"] .toolbarbutton-1 > menupopup {
 }
 
 toolbar:not([iconsize="small"])[mode="icons"] #back-button {
-  -moz-margin-end: -5px;
+  margin-inline-end: -5px;
   position: relative;
   -moz-image-region: rect(0, 20px, 20px, 0);
 }
@@ -660,28 +660,28 @@ toolbar:not([iconsize="small"])[mode="icons"] #back-button {
 }
 
 toolbar[mode="icons"] #forward-button {
-  -moz-margin-start: 0;
+  margin-inline-start: 0;
 }
 
 toolbar[mode="icons"]:not([iconsize="small"]) #forward-button {
   /* 1px to the right */
-  -moz-padding-start: 4px;
-  -moz-padding-end: 2px;
+  padding-inline-start: 4px;
+  padding-inline-end: 2px;
 }
 
 toolbar[iconsize="small"][mode="icons"] #back-button {
-  -moz-margin-end: 0;
+  margin-inline-end: 0;
 }
 
 toolbar[iconsize="small"][mode="icons"] #back-button {
   width: 26px;
-  -moz-border-end-width: 0;
-  -moz-padding-end: 2px;
+  border-inline-end-width: 0;
+  padding-inline-end: 2px;
 }
 
 toolbar[iconsize="small"][mode="icons"] #forward-button  {
   width: 27px;
-  -moz-padding-start: 2px;
+  padding-inline-start: 2px;
 }
 
 toolbar[mode="icons"]:not([iconsize="small"]) #forward-button:-moz-locale-dir(ltr),
@@ -738,8 +738,8 @@ toolbar[iconsize="small"][mode="icons"] #forward-button:-moz-locale-dir(rtl) {
 
 #home-button.bookmark-item > .toolbarbutton-icon {
   display: -moz-box !important;
-  -moz-margin-start: -2px;
-  -moz-margin-end: 3px;
+  margin-inline-start: -2px;
+  margin-inline-end: 3px;
 }
 
 /* tabview button */
@@ -882,12 +882,12 @@ toolbar[iconsize="small"][mode="icons"] #forward-button:-moz-locale-dir(rtl) {
 }
 
 toolbar[mode="icons"] #zoom-out-button {
-  -moz-margin-end: 0;
+  margin-inline-end: 0;
 }
 
 toolbar[mode="icons"] #zoom-in-button {
-  -moz-border-start: none;
-  -moz-margin-start: 0;
+  border-inline-start: none;
+  margin-inline-start: 0;
   height: 16px;
 }
 
@@ -977,7 +977,7 @@ toolbar[mode="icons"] #zoom-in-button {
 }
 
 #urlbar-container:not([combined]) > #urlbar {
-  -moz-padding-end: 3px;
+  padding-inline-end: 3px;
 }
 
 #identity-box {
@@ -997,7 +997,7 @@ toolbar[mode="icons"] #zoom-in-button {
 #identity-box {
   color: white;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
-  -moz-margin-end: 3px;
+  margin-inline-end: 3px;
 }
 
 #identity-box {
@@ -1023,12 +1023,12 @@ toolbar[mode="icons"] #zoom-in-button {
 }
 
 #notification-popup-box:not([hidden]) + #identity-box {
-  -moz-padding-start: 10px;
+  padding-inline-start: 10px;
   border-radius: 0;
 }
 
 .urlbar-input-box {
-  -moz-margin-start: 0;
+  margin-inline-start: 0;
   padding: 3px 0 2px;
 }
 
@@ -1038,14 +1038,14 @@ toolbar[mode="icons"] #zoom-in-button {
 
 #urlbar-search-splitter {
   min-width: 6px;
-  -moz-margin-start: -3px;
+  margin-inline-start: -3px;
   border: none;
   background: transparent;
 }
 
 #urlbar-search-splitter + #urlbar-container > #urlbar ,
 #urlbar-search-splitter + #search-container > #searchbar > .searchbar-textbox {
-  -moz-margin-start: 0;
+  margin-inline-start: 0;
 }
 
 #searchbar .searchbar-textbox {
@@ -1098,10 +1098,10 @@ toolbar[mode="icons"] #zoom-in-button {
   margin-bottom: -2px;
   padding-top: 3px;
   padding-bottom: 2px;
-  -moz-padding-end: 3px;
+  padding-inline-end: 3px;
   color: GrayText;
-  -moz-border-end: 1px solid #AAA;
-  -moz-margin-end: 3px;
+  border-inline-end: 1px solid #AAA;
+  margin-inline-end: 3px;
 }
 
 #PopupAutoCompleteRichResult {
@@ -1117,7 +1117,7 @@ toolbar[mode="icons"] #zoom-in-button {
 }
 
 .urlbar-origin-label:-moz-locale-dir(rtl) {
-  -moz-padding-start: 4px;
+  padding-inline-start: 4px;
 }
 
 .urlbar-over-link-box {
@@ -1234,8 +1234,8 @@ window[tabsontop="false"] richlistitem[type~="action"][actiontype="switchtab"][s
 #go-button,
 #urlbar > toolbarbutton {
   margin: 0;
-  -moz-padding-start: 2px;
-  -moz-padding-end: 1px;
+  padding-inline-start: 2px;
+  padding-inline-end: 1px;
   background-origin: border-box;
   list-style-image: url("chrome://browser/skin/reload-stop-go.png");
 }
@@ -1301,7 +1301,7 @@ window[tabsontop="false"] richlistitem[type~="action"][actiontype="switchtab"][s
 /* STAR BUTTON */
 #star-button {
   padding: 1px;
-  -moz-padding-start: 4px;
+  padding-inline-start: 4px;
   list-style-image: url("chrome://browser/skin/places/star-icons.png");
   -moz-image-region: rect(0, 16px, 16px, 0);
 }
@@ -1400,7 +1400,7 @@ window[tabsontop="false"] richlistitem[type~="action"][actiontype="switchtab"][s
 }
 
 .editBookmarkPanelBottomButton:last-child {
-  -moz-margin-start: 8px;
+  margin-inline-start: 8px;
 }
 
 /* The following elements come from editBookmarkOverlay.xul. Styling that's
@@ -1425,7 +1425,7 @@ window[tabsontop="false"] richlistitem[type~="action"][actiontype="switchtab"][s
 #editBMPanel_newFolderButton {
   -moz-appearance: none;
   border: 0 solid #a5a5a5;
-  -moz-border-end-width: 1px;
+  border-inline-end-width: 1px;
   padding: 0 9px;
   margin: 0;
   min-width: 21px;
@@ -1457,8 +1457,8 @@ window[tabsontop="false"] richlistitem[type~="action"][actiontype="switchtab"][s
   min-height: 22px;
   padding-top: 2px;
   padding-bottom: 1px;
-  -moz-padding-start: 8px;
-  -moz-padding-end: 4px;
+  padding-inline-start: 8px;
+  padding-inline-end: 4px;
 }
 
 #editBMPanel_folderMenuList:focus {
@@ -1477,7 +1477,7 @@ window[tabsontop="false"] richlistitem[type~="action"][actiontype="switchtab"][s
   border: 0;
   margin: 0;
   padding: 0;
-  -moz-padding-end: 4px;
+  padding-inline-end: 4px;
   width: 7px;
 }
 
@@ -1581,13 +1581,13 @@ window[tabsontop="false"] richlistitem[type~="action"][actiontype="switchtab"][s
 
 .panel-promo-icon {
   list-style-image: url("chrome://browser/skin/sync-notification-24.png");
-  -moz-margin-end: 10px;
+  margin-inline-end: 10px;
   vertical-align: middle;
 }
 
 .panel-promo-closebutton {
   border: none;
-  -moz-margin-end: -14px;
+  margin-inline-end: -14px;
   margin-top: -8px;
 }
 
@@ -1630,8 +1630,8 @@ sidebarheader {
 }
 
 #sidebar-splitter {
-  -moz-border-start: none;
-  -moz-border-end: 1px solid #404040;
+  border-inline-start: none;
+  border-inline-end: 1px solid #404040;
   min-width: 1px;
   width: 1px;
   background-image: none !important;       
@@ -1680,8 +1680,8 @@ sidebarheader {
 }
 
 #sidebar-splitter {
-  -moz-border-start: none;
-  -moz-border-end: 1px solid #404040;
+  border-inline-start: none;
+  border-inline-end: 1px solid #404040;
   min-width: 1px;
   width: 1px;
   background-image: none !important;       
@@ -1798,8 +1798,8 @@ toolbarbutton.chevron > .toolbarbutton-menu-dropmarker {
 .tab-background,
 .tab-content,
 .tabs-newtab-button > .toolbarbutton-icon {
-  -moz-margin-start: -5px;
-  -moz-margin-end: -4px;
+  margin-inline-start: -5px;
+  margin-inline-end: -4px;
   pointer-events: none;
 }
 
@@ -1813,8 +1813,8 @@ toolbarbutton.chevron > .toolbarbutton-menu-dropmarker {
 }
 
 .tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
-  -moz-padding-start: 5px;
-  -moz-padding-end: 4px;
+  padding-inline-start: 5px;
+  padding-inline-end: 4px;
 }
 
 .tab-content,
@@ -2052,7 +2052,7 @@ toolbarbutton.chevron > .toolbarbutton-menu-dropmarker {
  */
 
 .tab-close-button > .toolbarbutton-icon {
-  -moz-margin-end: 0px !important;
+  margin-inline-end: 0px !important;
 }
 
 .tab-close-button {
@@ -2234,7 +2234,7 @@ toolbarbutton.chevron > .toolbarbutton-menu-dropmarker {
 }
 
 #alltabs-button > .toolbarbutton-icon {
-  -moz-margin-end: 2px;
+  margin-inline-end: 2px;
 }
 
 /* All Tabs Menupopup */
@@ -2248,7 +2248,7 @@ toolbarbutton.chevron > .toolbarbutton-menu-dropmarker {
 
 /* Tabstrip close button */
 .tabs-closebutton {
-  -moz-padding-end: 4px;
+  padding-inline-end: 4px;
   list-style-image: url("chrome://global/skin/icons/closetab.png");
   -moz-image-region: auto;
   border: none;
@@ -2286,7 +2286,7 @@ toolbarbutton.chevron > .toolbarbutton-menu-dropmarker {
 .menupopup-drop-indicator {
   list-style-image: none;
   height: 2px;
-  -moz-margin-end: -4em;
+  margin-inline-end: -4em;
   background-color: #6483f8;
 }
 
@@ -2314,13 +2314,13 @@ toolbarbutton.chevron > .toolbarbutton-menu-dropmarker {
 /* Popup Body Text */
 .identity-popup-description {
   white-space: pre-wrap;
-  -moz-padding-start: 15px;
+  padding-inline-start: 15px;
   margin: 2px 0 4px;
 }
 
 .identity-popup-label {
   white-space: pre-wrap;
-  -moz-padding-start: 15px;
+  padding-inline-start: 15px;
   margin: 0;
 }
 
@@ -2346,7 +2346,7 @@ toolbarbutton.chevron > .toolbarbutton-menu-dropmarker {
 #identity-popup-content-box.verifiedIdentity > #identity-popup-encryption ,
 #identity-popup-content-box.verifiedDomain > #identity-popup-encryption {
   margin-top: 10px;
-  -moz-margin-start: -24px;
+  margin-inline-start: -24px;
 }
 
 #identity-popup-content-box.verifiedIdentity > #identity-popup-encryption > vbox > #identity-popup-encryption-icon ,
@@ -2410,7 +2410,7 @@ toolbarbutton.chevron > .toolbarbutton-menu-dropmarker {
   border-width: 0 8px 0 0;
   border-style: solid;
   border-image: url("chrome://browser/skin/urlbar-arrow.png") 0 8 0 0 fill;
-  -moz-margin-end: -8px;
+  margin-inline-end: -8px;
 }
 
 window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"],#nav-bar:not([currentset])) > #unified-back-forward-button[forwarddisabled] + #urlbar-container > #urlbar > #notification-popup-box {
@@ -2454,7 +2454,7 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 }
 
 #geolocation-learnmore-link {
-  -moz-margin-start: 0; /* override default label margin to match description margin */
+  margin-inline-start: 0; /* override default label margin to match description margin */
 }
 
 .indexedDB-notification-icon,
@@ -2552,7 +2552,7 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 .popup-notification-icon {
   width: 64px;
   height: 64px;
-  -moz-margin-end: 10px;
+  margin-inline-end: 10px;
 }
 
 .popup-notification-icon[popupid="geolocation"] {
@@ -2596,8 +2596,8 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 
 .popup-progress-label,
 .popup-progress-meter {
-  -moz-margin-start: 0;
-  -moz-margin-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
 }
 
 .popup-progress-cancel {
@@ -2717,7 +2717,7 @@ notification.pluginVulnerable .messageImage {
 }
 
 .toolbarbutton-badge-stack > .toolbarbutton-icon[label]:not([label=""]) {
-  -moz-margin-end: 0;
+  margin-inline-end: 0;
 }
 
 #navigator-toolbox[iconsize=large][mode=icons] > #nav-bar *|* > .toolbarbutton-badge[badge]:not([badge=""])::after {
@@ -2768,12 +2768,12 @@ panel[type="arrow"][popupid="click-to-play-plugins"] > .panel-arrowcontainer > .
 }
 
 #main-window[privatebrowsingmode=temporary][inFullscreen] #nav-bar[tabsontop=false] {
-  -moz-padding-end: 50px !important;
+  padding-inline-end: 50px !important;
 }
 
 @media (-moz-mac-lion-theme) {
   #main-window[privatebrowsingmode=temporary][inFullscreen] #TabsToolbar[tabsontop=true] {
-    -moz-padding-end: 50px;
+    padding-inline-end: 50px;
   }
 }
 
@@ -2783,7 +2783,7 @@ panel[type="arrow"][popupid="click-to-play-plugins"] > .panel-arrowcontainer > .
   }
 
   #main-window[privatebrowsingmode=temporary][inFullscreen][tabsontop=true] #window-controls {
-    -moz-padding-end: 50px;
+    padding-inline-end: 50px;
   }
 }
 
@@ -2885,8 +2885,8 @@ panel[type="arrow"][popupid="click-to-play-plugins"] > .panel-arrowcontainer > .
 }
 
 #allTabs-filter {
-  -moz-margin-start: 24px;
-  -moz-margin-end: 0;
+  margin-inline-start: 24px;
+  margin-inline-end: 0;
 }
 
 #allTabs-tab-close-button > .toolbarbutton-icon {
@@ -2898,7 +2898,7 @@ panel[type="arrow"][popupid="click-to-play-plugins"] > .panel-arrowcontainer > .
   width: 20px;
   height: 20px;
   padding-bottom: 4px;
-  -moz-padding-start: 4px;
+  padding-inline-start: 4px;
   border-bottom-left-radius: 4px;
 }
 
@@ -2911,9 +2911,9 @@ panel[type="arrow"][popupid="click-to-play-plugins"] > .panel-arrowcontainer > .
   width: 22px;
   height: 22px;
   padding-top: 2px;
-  -moz-padding-end: 2px;
+  padding-inline-end: 2px;
   margin-top: -2px;
-  -moz-margin-end: -2px;
+  margin-inline-end: -2px;
 }
 
 .allTabs-preview-inner > .tabPreview-canvas {
@@ -3148,7 +3148,7 @@ panel[type="arrow"][popupid="click-to-play-plugins"] > .panel-arrowcontainer > .
   -moz-appearance: none;
   color: inherit;
   border-width: 0;
-  -moz-border-end: 1px solid hsla(210,8%,5%,.45);
+  border-inline-end: 1px solid hsla(210,8%,5%,.45);
   box-shadow: -1px 0 0 hsla(210,16%,76%,.15) inset, 1px 0 0 hsla(210,16%,76%,.15);
 }
 
@@ -3596,7 +3596,7 @@ html|*#gcli-output-frame {
 }
 
 .center-item-label {
-  -moz-margin-start: 6px;
+  margin-inline-start: 6px;
   margin-bottom: 0;
   text-overflow: ellipsis;
 }
@@ -3606,7 +3606,7 @@ html|*#gcli-output-frame {
   background-repeat: no-repeat;
   width: 16px;
   height: 15px;
-  -moz-margin-start: 6px;
+  margin-inline-start: 6px;
 }
 
 .click-to-play-plugins-notification-button-container {
@@ -3640,7 +3640,7 @@ html|*#gcli-output-frame {
   text-shadow: none;
   background-image: linear-gradient(#B4211B, #8A1915);
   border-radius: 1px;
-  -moz-margin-end: 5px;
+  margin-inline-end: 5px;
 }
 
 @media (-moz-windows-compositor) {

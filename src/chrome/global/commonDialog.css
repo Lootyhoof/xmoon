@@ -15,7 +15,7 @@
 }
 
 #info\.icon {
-  -moz-margin-end: 14px;
+  margin-inline-end: 14px;
 }
 
 #info\.title,

@@ -52,7 +52,7 @@
 
   @media not all and (-moz-windows-classic) {
     #titlebar-min {
-      -moz-margin-end: 2px;
+      margin-inline-end: 2px;
     }
   }
 }

@@ -18,9 +18,9 @@ body {
 
 .tab {
   padding-top: 4px;
-  -moz-padding-end: 6px;
+  padding-inline-end: 6px;
   padding-bottom: 6px;
-  -moz-padding-start: 4px;
+  padding-inline-start: 4px;
   background-color: #D7D7D7;
   border-radius: 0.4em;
   box-shadow: 0 1px 1.5px rgba(0, 0, 0, 0.4);
@@ -48,12 +48,12 @@ html[dir=rtl] .thumb {
     0 -1px 0 rgba(225, 225, 225, 0.8) inset,
     -1px 0 0 rgba(225, 225, 225, 0.8) inset;
   padding-top: 4px;
-  -moz-padding-end: 6px;
+  padding-inline-end: 6px;
   padding-bottom: 6px;
-  -moz-padding-start: 4px;
+  padding-inline-start: 4px;
   top: 4px;
   left: 4px;
-  -moz-border-end: 1px solid rgba(0, 0, 0, 0.3);
+  border-inline-end: 1px solid rgba(0, 0, 0, 0.3);
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   height: 16px;
   width: 16px;
@@ -247,7 +247,7 @@ html[dir=rtl] .overlay {
 .appTabTrayContainer {
   top: 34px;
   right: 1px;
-  -moz-border-start: 1px solid #E1E1E1;
+  border-inline-start: 1px solid #E1E1E1;
   padding: 0 5px;
   overflow: -moz-hidden-unscrollable;
   text-align: start;
@@ -354,7 +354,7 @@ html[dir=rtl] .info-item {
   opacity: 0.9;
   border: 1px dashed  rgba(0,0,0,.12);
   border-bottom: none;
-  -moz-border-end: none;
+  border-inline-end: none;
   box-shadow: 1px 1px 0 rgba(255,255,255,.15);
 }
 
@@ -432,9 +432,9 @@ input.name {
   border: 1px solid transparent;
   color: #999;
   margin-top: 3px;
-  -moz-margin-end: 0;
+  margin-inline-end: 0;
   margin-bottom: 0;
-  -moz-margin-start: 3px;
+  margin-inline-start: 3px;
   padding: 1px;
 }
 
@@ -461,7 +461,7 @@ input.name:-moz-placeholder {
   color: transparent;
   background-image: url(chrome://browser/skin/tabview/edit-light.png);
   background-repeat: no-repeat;
-  -moz-padding-start: 20px;
+  padding-inline-start: 20px;
 }
 
 .title-container:hover input.name:-moz-placeholder {
@@ -470,9 +470,9 @@ input.name:-moz-placeholder {
 
 .title-shield {
   margin-top: 3px;
-  -moz-margin-end: 0;
+  margin-inline-end: 0;
   margin-bottom: 0;
-  -moz-margin-start: 3px;
+  margin-inline-start: 3px;
   padding: 1px;
   left: 0;
   top: 0;
@@ -544,7 +544,7 @@ html[dir=rtl] .iq-resizable-se {
 #exit-button {
   width: 20px;
   height: 20px;
-  -moz-margin-end: 3px;
+  margin-inline-end: 3px;
   margin-top: 0px;
   background-image: -moz-image-rect(url(chrome://browser/skin/tabview/tabview.png), 0, 100, 20, 80);
   background-attachment: scroll;
@@ -593,8 +593,8 @@ html[dir=rtl] .iq-resizable-se {
   border: none;
   background-color: #272727;
   border-radius: 0.4em;
-  -moz-padding-start: 5px;
-  -moz-padding-end: 5px;
+  padding-inline-start: 5px;
+  padding-inline-end: 5px;
   font-size: 14px;  
 }
 
@@ -618,7 +618,7 @@ html[dir=rtl] .iq-resizable-se {
   width: 20px;
   height: 20px;
   margin-top: 3px;
-  -moz-margin-end: 1px;
+  margin-inline-end: 1px;
 }
 
 .notMainMatch {
@@ -642,8 +642,8 @@ html[dir=rtl] #otherresults {
 #otherresults .label {
   color: #999;
   line-height: 30px;
-  -moz-margin-start: 5px;
-  -moz-margin-end: 5px;
+  margin-inline-start: 5px;
+  margin-inline-end: 5px;
 }
 
 .inlineMatch {
@@ -651,10 +651,10 @@ html[dir=rtl] #otherresults {
   border-radius: 0.4em;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.5);
-  -moz-padding-start: 3px;
-  -moz-padding-end: 3px;
+  padding-inline-start: 3px;
+  padding-inline-end: 3px;
   height: 20px;
-  -moz-margin-end: 5px;
+  margin-inline-end: 5px;
   cursor: pointer;
 }
 
@@ -663,7 +663,7 @@ html[dir=rtl] #otherresults {
 }
 
 .inlineMatch > img {
-  -moz-margin-end: 5px;
+  margin-inline-end: 5px;
   position: relative;
   top: 2px;
 }

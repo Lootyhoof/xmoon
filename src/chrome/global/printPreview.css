@@ -66,7 +66,7 @@
   -moz-appearance: none;
   padding: 0 3px;
   margin: 0 0;
-  -moz-margin-end: 5px;
+  margin-inline-end: 5px;
   color: buttontext;
   border-radius: 4px;
   height: 26px;

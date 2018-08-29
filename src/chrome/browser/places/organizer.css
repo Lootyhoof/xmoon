@@ -74,8 +74,8 @@
 }
 
 #placesView > splitter {
-  -moz-border-start: none !important;
-  -moz-border-end: 1px solid #404040;
+  border-inline-start: none !important;
+  border-inline-end: 1px solid #404040;
   min-width: 1px;
   width: 1px;
   background-image: none !important;       
@@ -137,7 +137,7 @@
   list-style-image: url(chrome://browser/skin/toolbarbutton-dropmarker.png);
   padding: 0;
   margin-top: 1px;
-  -moz-margin-end: 2px;
+  margin-inline-end: 2px;
 }
 
 #placesToolbar > toolbarbutton > menupopup {
@@ -163,13 +163,13 @@
 }
 
 #back-button > .toolbarbutton-icon {
-  -moz-margin-start: 3px !important;
-  -moz-margin-end: 2px !important;
+  margin-inline-start: 3px !important;
+  margin-inline-end: 2px !important;
 }
 
 #forward-button > .toolbarbutton-icon {
-  -moz-margin-start: 2px !important;
-  -moz-margin-end: 3px !important;
+  margin-inline-start: 2px !important;
+  margin-inline-end: 3px !important;
 }
 
 /* organize button */
@@ -190,8 +190,8 @@
 /* clear download button */
 #clearDownloadsButton {
   -moz-image-region: rect(0px, 64px, 16px, 48px); 
-  -moz-padding-start: 9px;
-  -moz-padding-end: 9px;
+  padding-inline-start: 9px;
+  padding-inline-end: 9px;
 }
 
 
@@ -282,8 +282,8 @@
 
 #advancedSearchRows > row,
 #searchActions {
-  -moz-padding-start: 2px;
-  -moz-padding-end: 8px;
+  padding-inline-start: 2px;
+  padding-inline-end: 8px;
 }
 
 #organizerScopeBar {
@@ -336,7 +336,7 @@
 #organizerScopeBarExpander {
   margin: 0;
   padding: 0;
-  -moz-padding-end: 2px;
+  padding-inline-end: 2px;
 }
 
 #organizerScopeBar  > .expander-up {

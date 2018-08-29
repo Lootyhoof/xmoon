@@ -56,9 +56,9 @@ treechildren::-moz-tree-image(partial) {
 }
 
 #buttons {
-  -moz-margin-start: 80px; /* same as #errorLongContent in netError.css */
+  margin-inline-start: 80px; /* same as #errorLongContent in netError.css */
 }
 #buttons > button {
   margin-top: 2em;
-  -moz-margin-start: 6px;
+  margin-inline-start: 6px;
 }

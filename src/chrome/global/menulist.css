@@ -85,7 +85,7 @@ menulist:not([droppable="false"]):focus {
 .menulist-description {
   font-style: italic;
   color: GrayText;
-  -moz-margin-start: 1ex !important;
+  margin-inline-start: 1ex !important;
 }
 
 /* ..... dropmarker ..... */
