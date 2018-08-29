@@ -1,46 +1,12 @@
-/* ***** BEGIN LICENSE BLOCK *****
- * Version: MPL 1.1/GPL 2.0/LGPL 2.1
- *
- * The contents of this file are subject to the Mozilla Public License Version
- * 1.1 (the "License"); you may not use this file except in compliance with
- * the License. You may obtain a copy of the License at
- * http://www.mozilla.org/MPL/
- *
- * Software distributed under the License is distributed on an "AS IS" basis,
- * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
- * for the specific language governing rights and limitations under the
- * License.
- *
- * The Original Code is Mozilla Communicator client code, released
- * March 31, 1998.
- *
- * The Initial Developer of the Original Code is
- * Netscape Communications Corporation.
- * Portions created by the Initial Developer are Copyright (C) 1998-1999
- * the Initial Developer. All Rights Reserved.
- *
- * Contributor(s):
- *   Joe Hewitt (hewitt@netscape.com)
- *   Kevin Gerich (webmail@kmgerich.com)
- *
- * Alternatively, the contents of this file may be used under the terms of
- * either the GNU General Public License Version 2 or later (the "GPL"), or
- * the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
- * in which case the provisions of the GPL or the LGPL are applicable instead
- * of those above. If you wish to allow use of your version of this file only
- * under the terms of either the GPL or the LGPL, and not to allow others to
- * use your version of this file under the terms of the MPL, indicate your
- * decision by deleting the provisions above and replace them with the notice
- * and other provisions required by the GPL or the LGPL. If you do not delete
- * the provisions above, a recipient may use your version of this file under
- * the terms of any one of the MPL, the GPL or the LGPL.
- *
- * ***** END LICENSE BLOCK ***** */
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 menu,
 menuitem,
+menucaption,
 .splitmenu-menuitem {
   -moz-appearance: none;
   -moz-box-align: center;
@@ -89,6 +55,17 @@ menuitem[_moz-menuactive="true"][disabled="true"],
   margin-left: 6px !important;
 }
 
+menucaption > .menu-text,
+menucaption > .menu-iconic-text {
+  font-weight: bold;
+}
+
+.menu-description {
+  font-style: italic;
+  color: GrayText;
+  margin-inline-start: 1ex !important;
+}
+
 .menu-iconic-icon {
   width: 16px;
   height: 16px;
@@ -117,8 +94,8 @@ menuitem[src] > .menu-iconic-left > .menu-iconic-icon {
 
 .menu-right,
 .menu-accel-container {
-  -moz-margin-end: 6px;
-  -moz-margin-start: 15px;
+  margin-inline-end: 6px;
+  margin-inline-start: 15px;
   -moz-box-pack: end;
 }
 
@@ -151,7 +128,7 @@ menubar > menu {
 menubar > menu[_moz-menuactive="true"][open="true"],
 menubar > menu:-moz-lwtheme[_moz-menuactive="true"]:not([disabled="true"]) {
   color: #FFFFFF !important;
-  background: -moz-linear-gradient(#6483f8, #2255f5);
+  background: linear-gradient(#6483f8, #2255f5);
   text-shadow: none;
 }
 
@@ -179,7 +156,8 @@ menubar > menu:-moz-lwtheme:not([disabled="true"]) {
 /* ::::: menu/menuitems in popups ::::: */
 
 menupopup > menu,
-menupopup > menuitem {
+menupopup > menuitem,
+menupopup > menucaption {
   background: #FFFFFF;
   max-width: 42em;
   min-height: 19px;
@@ -189,14 +167,13 @@ menu[_moz-menuactive="true"],
 menuitem[_moz-menuactive="true"],
 .splitmenu-menuitem[_moz-menuactive="true"] {
   color: #FFFFFF !important;
-  background: -moz-linear-gradient(#6483f8, #2255f5);
+  background: linear-gradient(#6483f8, #2255f5);
 }
 
 /* ::::: menu/menuitems in menulist popups ::::: */
 
-.menulist-menupopup > menuitem,
 menulist > menupopup > menuitem,
-.menulist-menupopup > menu,
+menulist > menupopup > menucaption,
 menulist > menupopup > menu {
   max-width: none;
   font: inherit;
@@ -217,11 +194,12 @@ menulist > menupopup > menuitem > .menu-iconic-text {
 
 /* ::::: menuitems in editable menulist popups ::::: */
 
-menulist[editable="true"] > menupopup > menuitem {
+menulist[editable="true"] > menupopup > menuitem,
+menulist[editable="true"] > menupopup > menucaption {
   -moz-appearance: none;
 }
 
-menulist[editable="true"] > menupopup > menuitem > .menu-iconic-left {
+menulist[editable="true"] > menupopup > :-moz-any(menuitem, menucaption) > .menu-iconic-left {
   display: none;
 }
 
@@ -248,7 +226,7 @@ menulist:not([editable="true"]) > menupopup > menuitem[selected="true"]::before 
   content: '\2713'; /* a checkmark */
   display: block;
   width: 15px;
-  -moz-margin-start: -15px;
+  margin-inline-start: -15px;
 }
 
 /* ::::: menuseparator ::::: */
@@ -264,12 +242,4 @@ menuseparator {
 .autocomplete-history-popup > menuitem {
   max-width: none !important;
   font: message-box;
-}
-
-/* ::::: tree column picker ::::: */
-
-.treecell-popupcell-menu {
-  margin-left: -2px;
-  list-style-image: url("chrome://global/skin/columnselect.gif");
-  -moz-image-region: auto;
 }
