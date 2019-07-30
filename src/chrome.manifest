@@ -3,6 +3,7 @@ skin communicator xmoon chrome/communicator/
 skin mozapps      xmoon chrome/mozapps/
 skin global       xmoon chrome/global/
 skin os           xmoon chrome/os/darwin/ os=Darwin
-skin os           xmoon chrome/os/general/ os!=Darwin
+skin os           xmoon chrome/os/linux/ os=Linux
+skin os           xmoon chrome/os/winnt/ os=WINNT
 
 override chrome://browser/skin/autocomplete.css chrome://global/skin/autocomplete.css
