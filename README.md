@@ -1,5 +1,5 @@
 # XMoon
-![Preview](http://i64.tinypic.com/23ucyt3.png)
+![Preview](https://i.imgur.com/PTebvce.png)
 
 Fork of the theme "MacOSX Theme" by GOLF-AT for Pale Moon.
 
