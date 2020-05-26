@@ -658,3 +658,15 @@
     padding-right: 1px;
   }
 }
+
+/* Private browsing indicator */
+
+#main-window[privatebrowsingmode=temporary] #toolbar-menubar {
+  background-image: url("chrome://browser/skin/privatebrowsing-dark.png");
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+#main-window[privatebrowsingmode=temporary] #toolbar-menubar:-moz-locale-dir(rtl) {
+  background-position: top left;
+}

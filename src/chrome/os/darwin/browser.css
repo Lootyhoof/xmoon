@@ -66,7 +66,6 @@
   margin-top: 3px;
 }
 
-#main-window[privatebrowsingmode=temporary] > #titlebar,
 #main-window:-moz-lwtheme > #titlebar {
   -moz-appearance: none !important;
 }
@@ -74,4 +73,14 @@
 #main-window {
   -moz-appearance: none;
   background-color: #eeeeee;
+}
+
+/* Private browsing indicator */
+
+#main-window[privatebrowsingmode=temporary] #TabsToolbar::before {
+  display: -moz-box;
+  content: "";
+  background: url("chrome://browser/skin/privatebrowsing-dark.png") 5px no-repeat;
+  width: 30px;
+  color: inherit;
 }

@@ -66,3 +66,13 @@
   background: none;
   border-style: none;
 }
+
+/* Private browsing indicator */
+
+#main-window[privatebrowsingmode=temporary] #toolbar-menubar[autohide="false"] ~ #TabsToolbar::before {
+  display: -moz-box;
+  content: "";
+  background: url("chrome://browser/skin/privatebrowsing-dark.png") 5px no-repeat;
+  width: 30px;
+  color: inherit;
+}
