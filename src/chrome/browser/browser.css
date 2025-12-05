@@ -2917,9 +2917,8 @@ panel[type="arrow"][popupid="click-to-play-plugins"] > .panel-arrowcontainer > .
     var(--statusbar-background-color) 2px, #CACACA 2px, var(--toolbar-background-color) 95%);
 }
 
-@media (-moz-os-version: windows-vista),
-       (-moz-os-version: windows-win7),
-	   (-moz-os-version: windows-win8) {
+@media (-moz-os-version: windows-win7),
+	     (-moz-os-version: windows-win8) {
   @media not all and (-moz-windows-classic) {
 	#addon-bar {
 	  background-image: linear-gradient(#515151 1px, var(--statusbar-background-color) 1px,
